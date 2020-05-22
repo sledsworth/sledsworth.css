@@ -5,7 +5,11 @@ templateClass: tmpl-post
 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
 
-<h1>{{ title }}</h1>
+{% if link %}
+  <a href="{{ link }}"><h1>{{ title }}</h1></a>
+{% else %}
+  <h1>{{ title }}</h1>
+{% endif %}
 
 {{ content | safe }}
 
