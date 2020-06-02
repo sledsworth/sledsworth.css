@@ -7,6 +7,8 @@
   --navy: #17050F;
   --blue: #082840;
   --white: #fff;
+
+  --max-width: 800px;
 }
 * {
   box-sizing: border-box;
@@ -22,7 +24,7 @@ body {
 p:last-child {
   margin-bottom: 0;
 }
-p,
+
 .tmpl-post li,
 img {
   max-width: 37.5em; /* 600px /16 */
@@ -30,6 +32,7 @@ img {
 p,
 .tmpl-post li {
   line-height: 1.45;
+  margin: 0 0 2rem;
 }
 a[href] {
   color: var(--blue);
@@ -41,7 +44,7 @@ main {
   padding: 1rem;
 }
 main :first-child {
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 header {
   border-bottom: 1px dashed var(--lightgray);
@@ -237,4 +240,36 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
   color: #aaa;
+}
+
+.post {
+  display: flex;
+flex-direction: column;
+margin: 10rem 0;
+max-width: 800px;
+}
+
+.post h1 {
+  margin: 0;
+font-size: 2rem;
+}
+
+.post .post-meta-data {
+  display: flex;
+align-items: baseline;
+margin: 0 0 5rem;
+}
+}
+
+.post .post-meta-data p {
+  margin: 0 1rem 0 0;
+flex: 1 10 400px;
+font-size: 1.2rem;
+}
+
+.post .post-meta-data time {
+  flex: 1 4 100px;
+/* justify-self: flex-end; */
+text-align: end;
+font-weight: 900;
 }
