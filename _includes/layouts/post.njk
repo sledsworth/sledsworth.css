@@ -11,7 +11,7 @@ templateClass: tmpl-post
   <h1>{{ title }}</h1>
 {% endif %}
   <section class="post-meta-data">
-    <p>{{ subtitle }}</p>
+    <p class="post-meta-data--subtitle">{{ subtitle }}</p>
     <time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
   </section>
 
