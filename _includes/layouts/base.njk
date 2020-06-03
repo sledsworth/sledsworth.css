@@ -27,8 +27,17 @@
       {{ content | safe }}
     </main>
 
-    <footer></footer>
-
+    <footer>
+      <a href="/feed/feed.xml">RSS</a>
+      <a href="https://twitter.com/sledsworth">Twitter</a>
+      <a href="mailto:sledsworth@gmail.com">Email</a>
+      <a href="https://github.com/sledsworth">Github</a>
+      <a href="https://codepen.io/sledsworth">CodePen</a>
+      <p id="copyright" class="text-fine copyright">2020 Steven Ledsworth</p>
+    </footer>
+    <script>
+      document.querySelector('#copyright').innerHTML = new Date().getFullYear() + ' Steven Ledsworth';
+    </script>
     <!-- Current page: {{ page.url | url }} -->
   </body>
 </html>
