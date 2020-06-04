@@ -2,27 +2,23 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-{% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-{% set nextPost = collections.posts | getNextCollectionItem(page) %}
-<article class="post">
-{% if link %}
-  <a href="{{ link }}"><h1>{{ title }}</h1></a>
-{% else %}
-  <h1>{{ title }}</h1>
-{% endif %}
-  <section class="post-meta-data">
-    <p class="post-meta-data--subtitle">{{ subtitle }}</p>
-    <time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
-  </section>
 
-{{ content | safe }}
-<nav>
-  <label>
-    {% if previousPost %}← Previous <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
-  </label>
-  <a class="home" href="{{ '/' | url }}">Home</a>
-  <label> 
-    {% if nextPost %}Next → <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
-  </label>
-</nav>
+{% set previousPost = collections.posts | getPreviousCollectionItem(page) %} {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+<article class="post">
+	{% if link %}
+	<a href="{{ link }}"><h1>{{ title }}</h1></a>
+	{% else %}
+	<h1>{{ title }}</h1>
+	{% endif %}
+	<section class="post-meta-data">
+		<p class="post-meta-data--subtitle">{{ subtitle }}</p>
+		<time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+	</section>
+
+	{{ content | safe }}
 </article>
+<nav class="related-posts-nav">
+	<label> {% if previousPost %}← Previous <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %} </label>
+	<a class="home" href="{{ '/' | url }}">Home</a>
+	<label> {% if nextPost %}Next → <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %} </label>
+</nav>

@@ -27,6 +27,9 @@ body {
 	font-family: system-ui, sans-serif;
 	color: var(--color-text-200);
 	background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 p:last-child {
 	margin-bottom: 0;
@@ -52,17 +55,12 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-main :first-child {
-	/* margin-top: 0; */
+  margin: 0 0 10rem;
 }
 header {
-	border-bottom: 1px dashed var(--lightgray);
-}
-header:after {
-	content: "";
-	display: table;
-	clear: both;
+  margin: 10rem 0 10rem;
+  max-width: var(--max-width);
+  width: 100%;
 }
 table {
 	margin: 1em 0;
@@ -137,8 +135,20 @@ pre {
 	justify-content: flex-start;
 }
 
+.gobal-header-title-section {
+  flex: 2 1;
+}
+
 .global-header-title {
 	margin: 1rem 1rem 0 0;
+  font-size: 1.5rem;
+}
+
+.global-header-tagline {
+  margin: 0;
+  color: var(--color-text-300);
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .global-header-nav {
@@ -147,6 +157,8 @@ pre {
 	display: flex;
 	justify-content: flex-end;
 	margin: 0;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 @media screen and (max-width: 600px) {
@@ -256,7 +268,7 @@ a[href].direct-link:focus:visited,
 .post {
 	display: flex;
 	flex-direction: column;
-	margin: 10rem 0;
+	margin: 0 0 6rem;
 	max-width: 800px;
 }
 
@@ -285,14 +297,16 @@ a[href].direct-link:focus:visited,
 	color: var(--color-text-400);
 }
 
-.post nav {
+.related-posts-nav {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: flex-start;
+  width: 100%;
+  max-width: var(--max-width);
 }
 
-.post nav label {
+.related-posts-nav label {
 	flex: 1 1 100px;
 	display: flex;
 	flex-direction: column;
@@ -301,17 +315,17 @@ a[href].direct-link:focus:visited,
 	color: var(--color-text-400);
 }
 
-.post nav .home {
+.related-posts-nav .home {
 	flex: 2 1;
 	text-align: center;
 }
 
-.post nav label:first-child {
+.related-posts-nav label:first-child {
 	margin: 0 2rem 0 0;
 	align-items: flex-start;
 }
 
-.post nav label:last-child {
+.related-posts-nav label:last-child {
 	margin: 0 0 0 2rem;
 	align-items: flex-end;
 	text-align: right;

@@ -11,9 +11,9 @@
   </head>
   <body>
     <header class="global-header">
-      <section>
-      <h1 class="global-header-title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-      <h2 class="global-header-subtitle">This is a subtitle</h2>
+      <section class="gobal-header-title-section">
+        <h1 class="global-header-title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+        <h2 class="global-header-tagline">{{ metadata.tagline }}</h2>
       </section>
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <ul class="global-header-nav">
