@@ -27,9 +27,9 @@ body {
 	font-family: system-ui, sans-serif;
 	color: var(--color-text-200);
 	background-color: var(--color-background);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 p:last-child {
 	margin-bottom: 0;
@@ -45,7 +45,20 @@ p,
 	margin: 0 0 2rem;
 }
 a[href] {
+	text-decoration: none;
 	color: var(--color-text-100);
+	transition: all .2s ease;
+	border-bottom: 0;
+}
+a[href]:hover {
+	box-shadow: 0px -6px var(--color-text-400) inset;
+	/* border-bottom: 5px solid var(--color-text-400); */
+	/* background: var(--color-text-400); */
+}
+a[href]:before:hover {
+	content: ' ';
+	background: var(--color-text-400);
+	width: 100%;
 }
 a[href]:visited {
 	color: var(--color-text-100);
@@ -55,12 +68,12 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  margin: 0 0 10rem;
+	margin: 0 0 10rem;
 }
 header {
-  margin: 10rem 0 10rem;
-  max-width: var(--max-width);
-  width: 100%;
+	margin: 10rem 0 10rem;
+	max-width: var(--max-width);
+	width: 100%;
 }
 table {
 	margin: 1em 0;
@@ -136,19 +149,19 @@ pre {
 }
 
 .gobal-header-title-section {
-  flex: 2 1;
+	flex: 2 1;
 }
 
 .global-header-title {
 	margin: 1rem 1rem 0 0;
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 
 .global-header-tagline {
-  margin: 0;
-  color: var(--color-text-300);
-  font-size: 1.2rem;
-  font-weight: 400;
+	margin: .25rem 0 0;
+	color: var(--color-text-300);
+	font-size: 1.2rem;
+	font-weight: 400;
 }
 
 .global-header-nav {
@@ -157,8 +170,8 @@ pre {
 	display: flex;
 	justify-content: flex-end;
 	margin: 0;
-  flex-direction: column;
-  align-items: flex-end;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
 @media screen and (max-width: 600px) {
@@ -184,7 +197,7 @@ pre {
 }
 .nav-item {
 	display: inline-block;
-	margin-right: 1em;
+	margin: .25rem 0 0;
 }
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
@@ -302,8 +315,8 @@ a[href].direct-link:focus:visited,
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: flex-start;
-  width: 100%;
-  max-width: var(--max-width);
+	width: 100%;
+	max-width: var(--max-width);
 }
 
 .related-posts-nav label {
