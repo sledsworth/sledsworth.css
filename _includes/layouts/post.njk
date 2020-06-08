@@ -19,6 +19,6 @@ templateClass: tmpl-post
 </article>
 <nav class="related-posts-nav">
 	<label> {% if previousPost %}← Previous <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %} </label>
-	<a class="home" href="{{ '/' | url }}">Home</a>
+	<label><a class="home" href="{{ '/' | url }}">Home</a></label>
 	<label> {% if nextPost %}Next → <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %} </label>
 </nav>
