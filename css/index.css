@@ -371,3 +371,8 @@ footer .copyright {
 .page-header {
   margin: 0;
 }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-text-400);
+}
