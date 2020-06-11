@@ -403,6 +403,11 @@ hr {
   grid-area: excerpt;
 }
 
+a:not([href^="/"])::after {
+  content: ' ↗';
+  color: var(--color-text-300);
+}
+
 @media screen and (min-width: 1200px) {
   :root {
     --max-width: 1200px;
