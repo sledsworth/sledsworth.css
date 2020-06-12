@@ -4,7 +4,7 @@
     <hr />
     <article class="archive-post">
       <time class="postlist-date archive-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-      <h2 class="archive-heading"><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
+      <h2 class="archive-heading"><a href="{% if post.data.link %}{{ post.data.link | url }}{% else %}{{ post.url | url }}{% endif %}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
       <p class="archive-excerpt">{% if post.data.excerpt %}{{ post.data.excerpt }}{% else %}{{ post.data.description}}{% endif %}</p>
       {# {% for tag in post.data.tags %}
         {%- if collections.tagList.indexOf(tag) != -1 -%}

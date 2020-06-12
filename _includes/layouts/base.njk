@@ -12,27 +12,30 @@
   <body>
     {% include "construction.njk" %}
     {% include "announcement.njk" %}
-    <header class="global-header">
-      <section class="gobal-header-title-section">
-        <h1 class="global-header-title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-        <h2 class="global-header-tagline">{{ metadata.tagline }}</h2>
-      </section>
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="global-header-nav">
-      {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
-      </ul>
+    <header class="container">
+      <div class="global-header">
+        <section class="gobal-header-title-section">
+          <h1 class="global-header-title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+          <div class="global-header-tagline"><h2>{{ metadata.tagline }}</h2></div>
+        </section>
+        {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+        <ul class="global-header-nav">
+        {%- for entry in collections.all | eleventyNavigation %}
+          <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+        {%- endfor %}
+        </ul>
+      </div>
     </header>
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
-    </main>
-
+    <div class="container">
+      <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+        {{ content | safe }}
+      </main>
+    </div>
     <footer>
       <nav>
         <a href="/rss">RSS</a>
-        <a href="https://twitter.com/sledsworth">Twitter</a>
         <a href="mailto:sledsworth@gmail.com">Email</a>
+        <a href="https://twitter.com/sledsworth">Twitter</a>
         <a href="https://github.com/sledsworth">Github</a>
         <a href="https://codepen.io/sledsworth">CodePen</a>
       </nav>
