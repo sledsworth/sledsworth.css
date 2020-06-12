@@ -13,9 +13,22 @@
   --color-text-300: rgba(255, 255, 255, 0.5);
   --color-text-400: rgba(255, 255, 255, 0.25);
 
+  --color-primary: #ffce00;
+
   --color-background: #3c324a;
 
   --max-width: 900px;
+}
+
+@media(prefers-color-scheme: light) {
+  :root {
+    --color-text-100: rgba(0, 0, 0, 0.9);
+    --color-text-200: rgba(0, 0, 0, 0.75);
+    --color-text-300: rgba(0, 0, 0, 0.5);
+    --color-text-400: rgba(0, 0, 0, 0.25);
+
+    --color-background: #ffffff;
+  }
 }
 * {
   box-sizing: border-box;
@@ -50,9 +63,10 @@ a[href] {
   color: var(--color-text-100);
   transition: all 0.2s ease;
   border-bottom: 0;
+  box-shadow: 0px -1px var(--color-primary) inset;
 }
 a[href]:hover {
-  box-shadow: 0px -6px var(--color-text-400) inset;
+  box-shadow: 0px -6px var(--color-primary) inset;
   /* border-bottom: 5px solid var(--color-text-400); */
   /* background: var(--color-text-400); */
 }
@@ -108,6 +122,11 @@ pre {
   margin: 0.5em 0;
   background-color: #f6f6f6;
 }
+
+emphasis {
+  font-style: italic;
+}
+
 .highlight-line {
   display: block;
   padding: 0.125em 1em;
@@ -403,9 +422,19 @@ hr {
   grid-area: excerpt;
 }
 
-a:not([href^="/"])::after {
-  content: ' ↗';
+a[href^="http"]::after {
+  content: '↗';
+  padding-left: .125rem;
+  font-weight: 800;
   color: var(--color-text-300);
+  transition: all .2s ease;
+}
+
+a[href^="http"]:hover::after {
+  content: '↗';
+  padding-left: .125rem;
+  font-weight: 800;
+  color: var(--color-primary);
 }
 
 @media screen and (min-width: 1200px) {
@@ -419,4 +448,5 @@ a:not([href^="/"])::after {
     "date heading heading excerpt excerpt"
   }
 }
+
 
