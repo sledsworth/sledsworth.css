@@ -128,6 +128,13 @@ emphasis {
   width: 100%;
 }
 
+@media screen and (max-width: 614px) {
+  .container {
+    padding: 15vh 1rem;
+    width: 100%;
+  }
+}
+
 .highlight-line {
   display: block;
   padding: 0.125em 1em;
@@ -471,6 +478,7 @@ a[href^="http"]:hover::after {
     "heading"
     "excerpt"
   }
+
 }
 
 
