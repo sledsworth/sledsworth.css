@@ -3,7 +3,8 @@ layout: layouts/base.njk
 templateClass: tmpl-post
 ---
 
-{% set previousPost = collections.posts | getPreviousCollectionItem(page) %} {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+{% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.posts | getNextCollectionItem(page) %}
 <article class="post">
 	{% if link %}
 	<h1><a href="{{ link }}">{{ title }}</a></h1>
@@ -12,7 +13,7 @@ templateClass: tmpl-post
 	{% endif %}
 	<section class="post-meta-data">
 		<p class="post-meta-data--subtitle">{{ subtitle }}</p>
-		<time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+		<time class="postlist-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 	</section>
 
 	{{ content | safe }}

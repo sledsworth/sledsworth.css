@@ -291,25 +291,27 @@ emphasis {
 }
 a[href].tag,
 a[href].tag:visited {
-  color: #fff;
+  color: var(--color-text-400);
 }
 
 /* Direct Links / Markdown Headers */
-.direct-link {
+.direct-link.direct-link {
   font-family: sans-serif;
   text-decoration: none;
   font-style: normal;
   margin-left: 0.1em;
+  box-shadow: none;
 }
 a[href].direct-link,
 a[href].direct-link:visited {
-  color: transparent;
+  color: var(--color-text-400);
 }
 a[href].direct-link:focus,
 a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
-  color: #aaa;
+  color: var(--color-primary);
+  box-shadow: none;
 }
 
 .post {
