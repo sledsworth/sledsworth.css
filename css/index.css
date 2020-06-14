@@ -197,6 +197,18 @@ emphasis {
   margin: 0;
 }
 
+.global-header-intro {
+  margin: 0;
+}
+
+.global-header-intro h2 {
+  color: var(--color-text-400);
+  font-size: .8rem;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+}
+
 .global-header-nav {
   flex: 1;
   padding: 0;
