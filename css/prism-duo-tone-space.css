@@ -26,7 +26,8 @@ pre[class*="language-"] {
 	hyphens: none;
 	background: #24242e;
 	color: #767693;
-  border-radius: 16px;
+  border-radius: 8px;
+  position: relative;
 }
 
 pre > code[class*="language-"] {
@@ -169,4 +170,39 @@ pre > code.highlight {
 	background: rgba(221, 103, 44, 0.2);
 	background: -webkit-linear-gradient(left, rgba(221, 103, 44, 0.2) 70%, rgba(221, 103, 44, 0));
 	background: linear-gradient(to right, rgba(221, 103, 44, 0.2) 70%, rgba(221, 103, 44, 0));
+}
+
+pre[class*="language-"] {
+  -webkit-overflow-scrolling: touch;
+}
+pre[class*="language-"]::before {
+  background: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
+}
+pre[class*="language-html"]::before {
+  content: "html";
+  background: var(--color-primary);
+  color: black;
+  font-weight: 800;
+}
+pre[class*="language-js"]::before {
+  content: "js";
+  background: var(--color-primary);
+  color: black;
+  font-weight: 800;
+}
+pre[class*="language-jsx"]::before {
+  content: "jsx";
+  background: var(--color-primary);
+  color: black;
+  font-weight: 800;
 }

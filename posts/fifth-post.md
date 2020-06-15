@@ -23,3 +23,12 @@ Cool
 
 Test
 Another
+
+```js
+
+some.js();
+var code = 3;
+this.thing();
+
+
+```
