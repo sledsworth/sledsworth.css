@@ -17,7 +17,9 @@
   </head>
   <body>
     {% include "construction.njk" %}
-    {% include "announcement.njk" %}
+    {% block announcement %}
+    {% endblock %}
+    {{ announcement | safe }}
     <header class="container">
       <div class="global-header">
         <section class="gobal-header-title-section">
@@ -35,7 +37,8 @@
     </header>
     <div class="container">
       <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-        {{ content | safe }}
+        {% block content %}
+        {% endblock %}
       </main>
     </div>
     <footer>

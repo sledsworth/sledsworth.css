@@ -129,13 +129,13 @@ emphasis {
 }
 
 .container {
-  padding: 15vh 2rem;
+  padding: 10vh 2rem;
   width: 100%;
 }
 
 @media screen and (max-width: 614px) {
   .container {
-    padding: 15vh 1rem;
+    padding: 8vh 1rem;
     width: 100%;
   }
 }
@@ -428,7 +428,7 @@ footer .copyright {
 
 .page-header {
   color: var(--color-text-100);
-  margin: 0 0 5rem 0;
+  margin: 0 0 6vh 0;
 }
 
 hr {
