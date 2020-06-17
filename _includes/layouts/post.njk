@@ -1,11 +1,16 @@
-{% extends "./base.njk" %}
-  {% block content %}
+{% extends "./base.njk" %} 
 
-{% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+{% block announcement %}
+    {% include "../announcement-banner.njk" %}
+{% endblock %}
+
+{% block content %} 
+{% set previousPost = collections.posts | getPreviousCollectionItem(page) %} 
 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+
 <article class="post">
 	{% if link %}
-	<h1><a href="{{ link }}">{{ title }}</a></h1>
+	<h1><a href="{{ link | url }}">{{ title }}</a></h1>
 	{% else %}
 	<h1>{{ title }}</h1>
 	{% endif %}
@@ -13,11 +18,11 @@
 		<p class="post-meta-data--subtitle">{{ subtitle }}</p>
 		<time class="postlist-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 	</section>
-  {{ content | safe }}
+	{{ content | safe }}
 </article>
 <nav class="related-posts-nav">
 	<label> {% if previousPost %}← Previous <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %} </label>
 	<label><a class="home" href="{{ '/' | url }}">Home</a></label>
 	<label> {% if nextPost %}Next → <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %} </label>
 </nav>
-  {% endblock %}
+{% endblock %}

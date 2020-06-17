@@ -11,11 +11,7 @@
       <time class="postlist-date archive-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
       {% endif %}
       <h2 class="archive-heading">
-        <a href="{% if post.data.link %}
-          {{ post.data.link | url }}
-          {% else %}
-          {{ post.url | url }}
-          {% endif %}">
+        <a href="{% if post.data.link %}{{ post.data.link | url }}{% else %}{{ post.url | url }}{% endif %}">
             {% if post.data.title %}
             {{ post.data.title }}
             {% else %}
@@ -23,8 +19,7 @@
             {% endif %}
         </a>
       </h2>
-      {% if post.data.excerpt %}<p class="archive-excerpt">{{ post.data.excerpt }}</p>{% endif %}
-     {% if post.content %}<p class="archive-excerpt">{{ post.content }}</p>{% endif %}
+      {% if post.data.description %}<p class="archive-excerpt">{{ post.data.description }}</p>{% endif %}
       {# {% for tag in post.data.tags %}
         {%- if collections.tagList.indexOf(tag) != -1 -%}
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}

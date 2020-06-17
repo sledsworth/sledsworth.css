@@ -21,7 +21,7 @@
   --max-width: 900px;
 }
 
-@media(prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
   :root {
     --color-text-100: rgba(0, 0, 0, 0.9);
     --color-text-200: rgba(0, 0, 0, 0.75);
@@ -81,7 +81,7 @@ main {
   max-width: var(--max-width);
   display: flex;
   flex-direction: column;
-  align-items: flex-start  ;
+  align-items: flex-start;
   margin: auto;
 }
 
@@ -101,7 +101,7 @@ code {
     "Courier New", Courier, monospace;
   line-height: 1.5;
   background-color: var(--color-text-500);
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 4px;
 }
 pre {
@@ -126,6 +126,19 @@ pre {
 
 emphasis {
   font-style: italic;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li:not(.nav-item)::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--color-primary); /* Change the color */
+  font-weight: bolder; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1rem; /* Also needed for space (tweak if needed) */
+  margin-left: -1rem; /* Also needed for space (tweak if needed) */
 }
 
 .container {
@@ -208,7 +221,7 @@ emphasis {
 
 .global-header-intro h2 {
   color: var(--color-text-400);
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 800;
   margin: 0;
   text-transform: uppercase;
@@ -229,7 +242,6 @@ emphasis {
   /* margin: 0.25rem 0 0; */
 }
 
-
 @media screen and (max-width: 614px) {
   .global-header {
     flex-direction: column;
@@ -247,7 +259,7 @@ emphasis {
 }
 .nav-item {
   display: inline-block;
-  margin: 0 0 .3rem 0;
+  margin: 0 0 0.3rem 0;
 }
 .nav-item:last-child {
   /* margin: 0.25rem 0 0; */
@@ -336,6 +348,7 @@ a[href].direct-link:focus:visited,
   flex-direction: column;
   margin: 0 0 6rem;
   max-width: var(--max-width);
+  width: 100%;
 }
 
 .post h1 {
@@ -411,7 +424,7 @@ footer {
 }
 
 footer a {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
 
 footer .copyright::before {
@@ -462,16 +475,16 @@ hr {
 }
 
 a[href^="http"]::after {
-  content: '↗';
-  padding-left: .125rem;
+  content: "↗";
+  padding-left: 0.125rem;
   font-weight: 800;
   color: var(--color-text-300);
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 a[href^="http"]:hover::after {
-  content: '↗';
-  padding-left: .125rem;
+  content: "↗";
+  padding-left: 0.125rem;
   font-weight: 800;
   color: var(--color-primary);
 }
@@ -483,8 +496,7 @@ a[href^="http"]:hover::after {
   .archive-post {
     grid-template-columns: 15% 30% 0 42% 0;
     gap: 2rem;
-    grid-template-areas:
-    "date heading heading excerpt excerpt"
+    grid-template-areas: "date heading heading excerpt excerpt";
   }
 }
 
@@ -493,11 +505,8 @@ a[href^="http"]:hover::after {
     grid-template-columns: 100%;
     gap: 0;
     grid-template-areas:
-    "date"
-    "heading"
-    "excerpt"
+      "date"
+      "heading"
+      "excerpt";
   }
-
 }
-
-

@@ -1,5 +1,9 @@
 {% extends "./base.njk" %}
 
+{% block announcement %}
+{% include "../announcement-banner.njk" %}
+{% endblock %}
+
 {% block content %}
 {{ content | safe }}
 {% endblock %}
