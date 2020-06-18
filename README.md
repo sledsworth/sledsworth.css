@@ -1,3 +1,15 @@
+# sledsworth.com
+
+## Docs
+
+### Announcements
+
+`/_includes/announcement.njk` is displayed only at the top of the home page.
+
+`/_includes/announcement-banner.njk` is displayed at the top of all other pages.
+
+
+
 # eleventy-base-blog
 
 A starter repository showing how to build a blog with the [Eleventy](https://github.com/11ty/eleventy) static site generator.
