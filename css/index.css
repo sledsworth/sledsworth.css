@@ -99,37 +99,6 @@ table th {
   padding-right: 1em;
 }
 
-pre,
-code {
-  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-    "Courier New", Courier, monospace;
-  line-height: 1.5;
-  background-color: var(--color-text-500);
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-pre {
-  font-size: 14px;
-  line-height: 1.375;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  -moz-tab-size: 2;
-  -o-tab-size: 2;
-  tab-size: 2;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  padding: 1em;
-  margin: 0.5em 0;
-  background-color: #f6f6f6;
-}
-
 emphasis {
   font-style: italic;
 }
@@ -140,11 +109,27 @@ ul {
 
 ul li:not(.nav-item)::before {
   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: var(--color-primary); /* Change the color */
+  color: var(--color-text-400); /* Change the color */
   font-weight: bolder; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1rem; /* Also needed for space (tweak if needed) */
   margin-left: -1rem; /* Also needed for space (tweak if needed) */
+}
+
+ol {
+  list-style: none;
+  counter-reset: counter;
+}
+ol li {
+  counter-increment: counter;
+  margin-left: -1.15rem
+}
+ol li::before {
+  content: counter(counter) ".";
+  color: var(--color-text-400);
+  font-weight: bold;
+  font-size: .75rem;
+  margin-right: .5rem;
 }
 
 .container {
