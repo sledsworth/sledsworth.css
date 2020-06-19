@@ -21,6 +21,12 @@
   --max-width: 900px;
 }
 
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    -—color-primary: color(display-p3 1 .7 .2);
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --color-text-100: rgba(0, 0, 0, 0.9);
@@ -509,4 +515,37 @@ a[href^="http"]:hover::after {
       "heading"
       "excerpt";
   }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-row.flex-paragraph h1 {
+  width: 100%;
+  margin: 1rem;
+}
+
+.flex-row.flex-paragraph {
+  margin: -1rem;
+}
+
+.flex-row.flex-paragraph p {
+  flex: 2 2 240px;
+  padding: 1rem;
+}
+
+.flex-row.flex-paragraph p:nth-child(4n + 3) {
+  background: var(--color-text-500);
+  border-radius: 16px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
