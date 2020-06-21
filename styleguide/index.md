@@ -76,6 +76,7 @@ Blockquote incoming:
 
 Some `inline coding` for good measure. This is a paragraph. It ought to be longer to be consider such. So that is what this is all about. Making more text. Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
 
+![Handsome portrait of Steve and his lovely wife Sam](https://f001.backblazeb2.com/file/empatheticbot/sam-and-i.png)
 
 ###### Heading 6
 
