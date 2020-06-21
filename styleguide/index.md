@@ -12,7 +12,7 @@ This page is a way for me to quickly make sure I didn't make any visual oopsies.
 
 This is a paragraph. It ought to be longer to be consider such. So that is what this is all about. Making more text. Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
 
-This is a paragraph. It ought to be longer to be consider such. So that is what this is all about. Making more text. Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
+This is a paragraph. *It ought to be longer* to be consider such. So that is what this is all about. **Making more text.** Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
 
 This is a paragraph. It ought to be longer to be consider such. So that is what this is all about. Making more text. Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
 
@@ -69,6 +69,13 @@ const looks = {
 ##### Heading 5
 
 This is a paragraph. It ought to be longer to be consider such. So that is what this is all about. Making more text. Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
+
+Blockquote incoming:
+
+> This is a paragraph. It ought to be longer to be consider such. So that is what this is all about. Making more text. Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
+
+Some `inline coding` for good measure. This is a paragraph. It ought to be longer to be consider such. So that is what this is all about. Making more text. Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
+
 
 ###### Heading 6
 

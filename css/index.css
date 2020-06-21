@@ -123,10 +123,10 @@ emphasis {
   font-style: italic;
 }
 
-ul {
-  list-style: none; /* Remove default bullets */
+ul, ol {
+  list-style: none;
+  counter-reset: counter;}
 }
-
 ul li::before {
   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: var(--color-text-400); /* Change the color */
@@ -134,12 +134,9 @@ ul li::before {
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1rem; /* Also needed for space (tweak if needed) */
   margin-left: -1rem; /* Also needed for space (tweak if needed) */
+  font-weight: 800;
 }
 
-ol {
-  list-style: none;
-  counter-reset: counter;
-}
 ol:not(.postlist) li {
   counter-increment: counter;
   margin-left: -1.15rem
@@ -555,4 +552,26 @@ a[href^="http"]:hover::after {
 ul.no-list-style li::before,
 ol.no-list-style li::before {
   content: none;
+}
+
+blockquote {
+  padding: 0 0 0 1rem;
+  border-left: 3px solid var(--color-primary);
+  margin: -1.5rem 0 2rem 0;
+}
+
+code {
+  background: var(--color-text-500);
+  font-family: monospace;
+  padding: .15rem .25rem;
+  border-radius: 4px;
+}
+
+em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 700;
 }
