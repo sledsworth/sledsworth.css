@@ -2,9 +2,9 @@
 layout: layouts/generic.njk
 title: Work
 templateClass: tmpl-post
-eleventyNavigation:
-  key: Work
-  order: 4
+# eleventyNavigation:
+#   key: Work
+#   order: 4
 ---
 
 The work I have done:

@@ -6,6 +6,9 @@ pagination:
 layout: layouts/home.njk
 permalink: /page-list/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}
 ---
+
+<h1>All Pages</h1>
+
 <table>
   <thead>
     <th>URL</th>
@@ -14,7 +17,7 @@ permalink: /page-list/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber
   <tbody>
 {%- for entry in entries %}
   <tr>
-    <td><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></td>
+    <td><a class="tag" href="{{ entry.url }}">{{ entry.url }}</a></td>
     <td>{{ entry.data.title }}</td>
   </tr>
 {%- endfor %}

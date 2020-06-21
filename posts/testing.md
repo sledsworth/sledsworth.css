@@ -1,5 +1,0 @@
----
-title: Testing
----
-
-This thing.
