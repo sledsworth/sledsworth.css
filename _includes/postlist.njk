@@ -19,6 +19,16 @@
             {% endif %}
         </a>
       </h2>
+      <ul class="tag-list no-list-style">
+      {% for tag in post.data.tags %}
+        {%- if collections.tagList.indexOf(tag) != -1 -%}
+        <li>
+          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+          <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+        </li>
+        {%- endif -%}
+      {% endfor %}
+      </ul>
       {% if post.data.description %}<p class="archive-excerpt">{{ post.data.description }}</p>{% endif %}
       {# {% for tag in post.data.tags %}
         {%- if collections.tagList.indexOf(tag) != -1 -%}

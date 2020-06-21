@@ -21,6 +21,26 @@
   --max-width: 900px;
 }
 
+/* The emerging W3C standard
+   that is currently Firefox-only */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-text-400) var(--color-background);
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-text-400);
+  border-radius: 20px;
+  border: 2px solid var(--color-background);
+}
+
 @supports (color: color(display-p3 1 1 1)) {
   :root {
     -—color-primary: color(display-p3 1 .7 .2);
@@ -62,7 +82,7 @@ p {
   line-height: 1.45;
   margin: 0 0 2rem;
 }
-a[href] {
+a {
   text-decoration: none;
   color: var(--color-text-100);
   transition: all 0.2s ease;
@@ -70,17 +90,17 @@ a[href] {
   box-shadow: 0px -1px var(--color-primary) inset;
   font-weight: 500;
 }
-a[href]:hover {
+a:hover {
   box-shadow: 0px -6px var(--color-primary) inset;
   /* border-bottom: 5px solid var(--color-text-400); */
   /* background: var(--color-text-400); */
 }
-a[href]:before:hover {
+a:before:hover {
   content: " ";
   background: var(--color-text-400);
   width: 100%;
 }
-a[href]:visited {
+a:visited {
   color: var(--color-text-100);
 }
 main {
@@ -107,7 +127,7 @@ ul {
   list-style: none; /* Remove default bullets */
 }
 
-ul li:not(.nav-item)::before {
+ul li::before {
   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: var(--color-text-400); /* Change the color */
   font-weight: bolder; /* If you want it to be bold */
@@ -120,11 +140,11 @@ ol {
   list-style: none;
   counter-reset: counter;
 }
-ol li {
+ol:not(.postlist) li {
   counter-increment: counter;
   margin-left: -1.15rem
 }
-ol li::before {
+ol:not(.postlist) li::before {
   content: counter(counter) ".";
   color: var(--color-text-400);
   font-weight: bold;
@@ -133,16 +153,15 @@ ol li::before {
 }
 
 .container {
-  padding: 10vh 2rem;
+  padding: 10vh calc(1rem + 1vw);
   width: 100%;
 }
 
-@media screen and (max-width: 614px) {
+/* @media screen and (max-width: 614px) {
   .container {
-    padding: 8vh 1rem;
-    width: 100%;
+    padding: 8vh 2rem;
   }
-}
+} */
 
 .highlight-line {
   display: block;
@@ -255,7 +274,7 @@ ol li::before {
 .nav-item:last-child {
   /* margin: 0.25rem 0 0; */
 }
-.nav-item a[href]:not(:hover) {
+.nav-item a:not(:hover) {
   text-decoration: none;
 }
 .nav-item-active a {
@@ -297,21 +316,25 @@ ol li::before {
 }
 
 /* Tags */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: tags;
+  margin: 0;
+}
+
 .tag {
   display: inline-block;
   vertical-align: text-top;
   text-transform: uppercase;
-  font-size: 0.625em; /* 10px /16 */
-  padding: 2px 4px;
-  margin-left: 0.8em; /* 8px /10 */
-  background-color: var(--red);
-  color: var(--white);
-  border-radius: 0.25em; /* 3px /12 */
+  font-size: 0.625em;
+  padding: .25rem .5rem;
+  margin: .25rem .5rem .25rem 0;
+  background-color: var(--color-primary);
+  color: var(--color-text-300);
+  border-radius: 0.25rem;
   text-decoration: none;
-}
-a[href].tag,
-a[href].tag:visited {
-  color: var(--color-text-400);
 }
 
 /* Direct Links / Markdown Headers */
@@ -322,14 +345,14 @@ a[href].tag:visited {
   margin-left: 0.1em;
   box-shadow: none;
 }
-a[href].direct-link,
-a[href].direct-link:visited {
+a.direct-link,
+a.direct-link:visited {
   color: var(--color-text-400);
 }
-a[href].direct-link:focus,
-a[href].direct-link:focus:visited,
-:hover > a[href].direct-link,
-:hover > a[href].direct-link:visited {
+a.direct-link:focus,
+a.direct-link:focus:visited,
+:hover > a.direct-link,
+:hover > a.direct-link:visited {
   color: var(--color-primary);
   box-shadow: none;
 }
@@ -349,13 +372,11 @@ a[href].direct-link:focus:visited,
 
 .post .post-meta-data {
   display: flex;
-  align-items: baseline;
-  margin: 0 0.25rem 5rem;
+  align-items: center;
 }
 
-.post .post-meta-data .post-meta-data--subtitle {
-  margin: 0 1rem 0 0;
-  flex: 1 10 400px;
+.post-description {
+  margin: 0 0 6vh 0;
   font-size: 1.2rem;
   color: var(--color-text-300);
 }
@@ -363,8 +384,7 @@ a[href].direct-link:focus:visited,
 .post .post-meta-data time {
   flex: 1 4 100px;
   text-align: end;
-  font-weight: 900;
-  color: var(--color-text-400);
+  color: var(--color-text-300);
 }
 
 .related-posts-nav {
@@ -386,7 +406,7 @@ a[href].direct-link:focus:visited,
 }
 
 .related-posts-nav .home {
-  margin: 1rem auto 0;
+  margin: 1.5rem auto 0;
 }
 
 .related-posts-nav label:first-child {
@@ -430,11 +450,6 @@ footer .copyright {
   align-self: flex-start;
 }
 
-.page-header {
-  color: var(--color-text-100);
-  margin: 0 0 6vh 0;
-}
-
 hr {
   border: none;
   border-top: 1px solid var(--color-text-400);
@@ -447,22 +462,24 @@ hr {
     "   . excerpt excerpt";
   grid-template-columns: 2fr 3fr 3fr;
   grid-template-rows: auto;
-  margin: 0 0 2rem 0;
+  margin: 0 0 3rem 0;
 }
 
 .archive-heading {
   grid-area: heading;
-  margin: 0 0 1rem 0;
+  margin: 0;
   font-size: 1.4rem;
   font-weight: 400;
 }
 
 .archive-date {
   grid-area: date;
+  margin: .5rem 0 0 0;
 }
 
 .archive-excerpt {
   grid-area: excerpt;
+  margin: .5rem 0 0 0;
 }
 
 a[href^="http"]::after {
@@ -480,24 +497,24 @@ a[href^="http"]:hover::after {
   color: var(--color-primary);
 }
 
-@media screen and (min-width: 1200px) {
-  :root {
-    --max-width: 1200px;
-  }
+@media screen and (min-width: 800px) {
   .archive-post {
-    grid-template-columns: 15% 30% 0 42% 0;
-    gap: 2rem;
-    grid-template-areas: "date heading heading excerpt excerpt";
+    grid-template-columns: 1.5fr 4fr 4fr;
+    gap: .5rem 2rem;
+    grid-template-areas:
+      "date heading excerpt"
+      "date tags    excerpt";
   }
 }
 
 @media screen and (max-width: 614px) {
   .archive-post {
     grid-template-columns: 100%;
-    gap: 0;
+    gap: 0 0;
     grid-template-areas:
       "date"
       "heading"
+      "tags"
       "excerpt";
   }
 }
@@ -515,7 +532,7 @@ a[href^="http"]:hover::after {
 }
 
 .flex-row.flex-paragraph {
-  margin: -1rem;
+  margin: -1rem auto;
 }
 
 .flex-row.flex-paragraph p {
@@ -533,4 +550,9 @@ a[href^="http"]:hover::after {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+ul.no-list-style li::before,
+ol.no-list-style li::before {
+  content: none;
 }

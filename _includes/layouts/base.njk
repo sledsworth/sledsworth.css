@@ -24,12 +24,12 @@
     <header class="container">
       <div class="global-header">
         <section class="gobal-header-title-section">
-          <div class="global-header-intro"><h2>A website by</h2></div>
+          <!-- <div class="global-header-intro"><h2>A website by</h2></div> -->
           <h1 class="global-header-title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
           <div class="global-header-tagline"><h2>{{ metadata.tagline }}</h2></div>
         </section>
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-        <ul class="global-header-nav">
+        <ul class="global-header-nav no-list-style">
         {%- for entry in collections.all | eleventyNavigation %}
           <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
         {%- endfor %}
