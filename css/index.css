@@ -84,16 +84,29 @@ p {
   line-height: 1.45;
   margin: 0 0 2rem;
 }
+
+p + ul, p + ol {
+  margin: -1.5rem 0 2rem 0;
+}
+
+nav a,
+header li a {
+  display: inline-block;
+}
+
 a {
+  display: inline;
   text-decoration: none;
   color: var(--color-text-100);
   transition: all 0.2s ease;
   border-bottom: 0;
   box-shadow: 0px -1px var(--color-primary) inset;
   font-weight: 500;
+  transition: all .15s ease-in-out;
 }
 a:hover {
   box-shadow: 0px -6px var(--color-primary) inset;
+  transform: scale(1.1);
   /* border-bottom: 5px solid var(--color-text-400); */
   /* background: var(--color-text-400); */
 }
@@ -152,6 +165,11 @@ ol:not(.postlist) li::before {
   font-weight: bold;
   font-size: .75rem;
   margin-right: .5rem;
+}
+
+.post-content ol li,
+.post-content ul li {
+  margin-bottom: .5rem;
 }
 
 .container {
@@ -339,6 +357,10 @@ ol:not(.postlist) li::before {
   text-decoration: none;
 }
 
+a.tag:hover {
+  transform: scale(1.2);
+}
+
 /* Direct Links / Markdown Headers */
 .direct-link.direct-link {
   font-family: sans-serif;
@@ -461,6 +483,7 @@ hr {
   display: grid;
   grid-template-areas:
     "date heading heading"
+    ". tags tags"
     "   . excerpt excerpt";
   grid-template-columns: 2fr 3fr 3fr;
   grid-template-rows: auto;
@@ -490,6 +513,7 @@ a[href^="http"]::after {
   font-weight: 800;
   color: var(--color-text-300);
   transition: all 0.2s ease;
+  display: inline-block;
 }
 
 a[href^="http"]:hover::after {
@@ -497,6 +521,7 @@ a[href^="http"]:hover::after {
   padding-left: 0.125rem;
   font-weight: 800;
   color: var(--color-primary);
+  transform: scale(1.4);
 }
 
 @media screen and (min-width: 800px) {
