@@ -15,8 +15,8 @@
   --color-text-500: rgba(255, 255, 255, 0.1);
 
   --color-primary: #ffce00;
-
-  --color-background: #3c324a;
+  --color-primary-dark: #775400;
+  --color-background: #1d1a20;
 
   --max-width: 900px;
 }
@@ -334,7 +334,7 @@ ol:not(.postlist) li::before {
   padding: .25rem .5rem;
   margin: .25rem .5rem .25rem 0;
   background-color: var(--color-primary);
-  color: var(--color-text-300);
+  color: var(--color-primary-dark);
   border-radius: 0.25rem;
   text-decoration: none;
 }
