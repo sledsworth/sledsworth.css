@@ -2,11 +2,11 @@
 {% for post in postslist | reverse %}
   {% set isDifferentDate = prevDate !== ( post.date | htmlDateString ) %}
   {% set isLinkPost = post.data.link != undefined %}
-  {% if isDifferentDate %}
-  <hr style="margin-top: 4rem;" />
-  {% endif %}
   {% set prevDate = post.date | htmlDateString %}
   <li>
+    {% if isDifferentDate %}
+    <hr style="margin: 4rem 0 0 0;" />
+    {% endif %}
     <article class="archive-post{% if isLinkPost %} link-post{% endif %}">
       {% if isDifferentDate %}
       <time class="postlist-date archive-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>

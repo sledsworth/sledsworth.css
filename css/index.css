@@ -177,12 +177,6 @@ ol:not(.postlist) li::before {
   width: 100%;
 }
 
-/* @media screen and (max-width: 614px) {
-  .container {
-    padding: 8vh 2rem;
-  }
-} */
-
 .highlight-line {
   display: block;
   padding: 0.125em 1em;
@@ -336,7 +330,6 @@ ol:not(.postlist) li::before {
 }
 
 /* Tags */
-
 .tag-list {
   display: flex;
   flex-wrap: wrap;
@@ -344,10 +337,8 @@ ol:not(.postlist) li::before {
   margin: 0;
 }
 
-.tag {
+a.tag {
   display: inline-block;
-  vertical-align: text-top;
-  text-transform: uppercase;
   font-size: 0.625em;
   padding: .25rem .5rem;
   margin: .25rem .5rem .25rem 0;
@@ -355,10 +346,17 @@ ol:not(.postlist) li::before {
   color: var(--color-primary-dark);
   border-radius: 0.25rem;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 a.tag:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
+  border-radius: .4rem;
+}
+
+a.tag:visited {
+  background-color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 /* Direct Links / Markdown Headers */
@@ -446,7 +444,7 @@ a.direct-link:focus:visited,
 
 .text-fine {
   font-size: 0.75rem;
-  color: var(--color-text-400);
+  color: var(--color-text-300);
 }
 
 footer {
