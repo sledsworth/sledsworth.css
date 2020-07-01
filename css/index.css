@@ -329,36 +329,6 @@ ol:not(.postlist) li::before {
   font-weight: bold;
 }
 
-/* Tags */
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  grid-area: tags;
-  margin: 0;
-}
-
-a.tag {
-  display: inline-block;
-  font-size: 0.625em;
-  padding: .25rem .5rem;
-  margin: .25rem .5rem .25rem 0;
-  background-color: var(--color-primary);
-  color: var(--color-primary-dark);
-  border-radius: 0.25rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-a.tag:hover {
-  transform: scale(1.15);
-  border-radius: .4rem;
-}
-
-a.tag:visited {
-  background-color: var(--color-primary);
-  color: var(--color-primary-dark);
-}
-
 /* Direct Links / Markdown Headers */
 .direct-link.direct-link {
   font-family: sans-serif;

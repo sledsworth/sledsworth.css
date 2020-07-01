@@ -1,0 +1,8 @@
+---
+permalink: index.css
+---
+{% set css %}
+  {% include "css/index.css" %}
+  {% include "tags/index.css" %}
+{% endset %}
+{{ css | cssmin | safe }}
