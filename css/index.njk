@@ -3,6 +3,8 @@ permalink: index.css
 ---
 {% set css %}
   {% include "css/index.css" %}
+  {% include "post-list.css" %}
+  {% include "post.css" %}
   {% include "tags/index.css" %}
 {% endset %}
 {{ css | cssmin | safe }}
