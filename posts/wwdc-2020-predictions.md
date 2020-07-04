@@ -5,6 +5,7 @@ tags:
 - apple #apple
 - wwdc #wwdc
 - tech #tech
+date: 2020-06-21
 ---
 
 In my typical fashion, WWDC 2020 is a day away and I have yet to read through what rumors and predictions others have put out—let alone take the time to make my unqualified guesses. Usually my procrastination spoils the option of even having a take, as all the big secrets are already leaked. This WWDC seems to be fairly tightly wrapped, even with the theoretically less secure work from home setup Apple is running due to COVID-19.
@@ -23,11 +24,11 @@ Catalyst **has** to get better. It’s just not a good experience—Apple has to
 
 ### ARM Mac Transition
 
-There is enough smoke here that I think this one is a give-me. How Apple positions itself and third-party developers is the more interesting question. 
+There is enough smoke here that I think this one is a give-me. How Apple positions itself and third-party developers is the more interesting question.
 
 Providing transition hardware at the scale Apple would need to do so seems crazy—especially because it’d just be throw-away hardware. It they did provide hardware, it would be a puck device akin to the Apple TV or Mac Mini. This has other concerns, like the fact that Apple laptops are extremely popular among developers and you cannot make an assumption that they all have an external monitor available.
 
-That leads me to believing the iPad Pro will be the developer hardware for testing macOS on ARM. It is weird and has it’s problems—like what does Apple do after the ARM Macs release? Or how do they handle the touchscreen on the iPad for macOS? These feel trivial to me compared to the issues of scaling developer hardware from nothing. The iPad Pro is already available in mass quantity and Apple doesn’t have a problem nickel-and-diming it’s developers. No need for external monitors. A decent number of developers probably already have one. Disabling the touchscreen when in macOS mode seems totally reasonable—and one of the reasons I feel like mouse support came to iPadOS at such a weird time. The iPad would be great developer transition hardware and would still be useful after the release of the ARM Mac, unlike dedicated hardware. The only thing that gets me hung up is what they do after ARM Macs are released. 
+That leads me to believing the iPad Pro will be the developer hardware for testing macOS on ARM. It is weird and has it’s problems—like what does Apple do after the ARM Macs release? Or how do they handle the touchscreen on the iPad for macOS? These feel trivial to me compared to the issues of scaling developer hardware from nothing. The iPad Pro is already available in mass quantity and Apple doesn’t have a problem nickel-and-diming it’s developers. No need for external monitors. A decent number of developers probably already have one. Disabling the touchscreen when in macOS mode seems totally reasonable—and one of the reasons I feel like mouse support came to iPadOS at such a weird time. The iPad would be great developer transition hardware and would still be useful after the release of the ARM Mac, unlike dedicated hardware. The only thing that gets me hung up is what they do after ARM Macs are released.
 
 I imagine if I had macOS on my iPad that I’d be hesitant to go back to iPadOS—and that isn’t a good look for Apple or iPadOS. I don’t know if Apple wants to let that genie out of the bottle yet, but my money is still on iPad as the developer device for ARM Macs
 
