@@ -1,17 +1,17 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+<ol class="post-list" reversed>
 {% for post in postslist | reverse %}
   {% set isDifferentDate = prevDate !== ( post.date | htmlDateString ) %}
   {% set isLinkPost = post.data.link != undefined %}
-  {% if isDifferentDate %}
-  <hr style="margin-top: 4rem;" />
-  {% endif %}
   {% set prevDate = post.date | htmlDateString %}
   <li>
-    <article class="archive-post{% if isLinkPost %} link-post{% endif %}">
+    {% if isDifferentDate %}
+    <hr style="margin: 4rem 0 0 0;" />
+    {% endif %}
+    <article class="post-list-item{% if isLinkPost %} link-post{% endif %}">
       {% if isDifferentDate %}
-      <time class="postlist-date archive-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+      <time class="post-list-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
       {% endif %}
-      <h2 class="archive-heading">
+      <h2 class="post-list-item-heading">
         <a href="{% if post.data.link %}{{ post.data.link | url }}{% else %}{{ post.url | url }}{% endif %}">
             {% if post.data.title %}
             {{ post.data.title }}
@@ -30,13 +30,7 @@
         {%- endif -%}
       {% endfor %}
       </ul>
-      {% if post.data.description %}<p class="archive-excerpt">{{ post.data.description }}</p>{% endif %}
-      {# {% for tag in post.data.tags %}
-        {%- if collections.tagList.indexOf(tag) != -1 -%}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
-        {%- endif -%}
-      {% endfor %} #}
+      {% if post.data.description %}<p class="post-list-item-excerpt">{{ post.data.description }}</p>{% endif %}
     </article>
   </li>
 {% endfor %}

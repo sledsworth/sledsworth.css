@@ -18,7 +18,9 @@
 	<h1>{{ title }}</h1>
 	{% endif %}
 	<p class="post-description">{{ description }}</p>
+  <section class="post-content">
 	{{ content | safe }}
+  </section>
 </article>
 <nav class="related-posts-nav">
 	<label> {% if nextPost %}← Newer <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %} </label>
