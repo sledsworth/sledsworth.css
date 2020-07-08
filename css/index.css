@@ -63,8 +63,6 @@
 }
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: system-ui, sans-serif;
   color: var(--color-text-200);
   background-color: var(--color-background);
@@ -155,11 +153,11 @@ ul li::before {
   font-weight: 800;
 }
 
-ol:not(.post-list) li {
+ol:not(.postlist) li {
   counter-increment: counter;
   margin-left: -1.15rem
 }
-ol:not(.post-list) li::before {
+ol:not(.postlist) li::before {
   content: counter(counter) ".";
   color: var(--color-text-400);
   font-weight: bold;
@@ -167,15 +165,21 @@ ol:not(.post-list) li::before {
   margin-right: .5rem;
 }
 
-/* .post-content ol li,
+.post-content ol li,
 .post-content ul li {
   margin-bottom: .5rem;
-} */
+}
 
 .container {
   padding: 10vh calc(1rem + 1vw);
   width: 100%;
 }
+
+/* @media screen and (max-width: 614px) {
+  .container {
+    padding: 8vh 2rem;
+  }
+} */
 
 .highlight-line {
   display: block;
@@ -296,6 +300,65 @@ ol:not(.post-list) li::before {
   box-shadow: 0px -3px var(--color-primary) inset;
 }
 
+/* Posts list */
+.postlist {
+  list-style: none;
+  padding: 0;
+}
+.postlist-item {
+  counter-increment: start-from -1;
+  margin: 0 0 3rem;
+}
+.postlist-item:before {
+  display: inline-block;
+  pointer-events: none;
+  /* content: "" counter(start-from, decimal-leading-zero) ". "; */
+  line-height: 100%;
+  text-align: right;
+}
+.postlist-date,
+.postlist-item:before {
+  font-size: 0.8125em; /* 13px /16 */
+  color: var(--color-text-300);
+}
+.postlist-date {
+  word-spacing: -0.5px;
+  display: block;
+}
+.postlist-link {
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+.postlist-item-active .postlist-link {
+  font-weight: bold;
+}
+
+/* Tags */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: tags;
+  margin: 0;
+}
+
+.tag {
+  display: inline-block;
+  vertical-align: text-top;
+  text-transform: uppercase;
+  font-size: 0.625em;
+  padding: .25rem .5rem;
+  margin: .25rem .5rem .25rem 0;
+  background-color: var(--color-primary);
+  color: var(--color-primary-dark);
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+a.tag:hover {
+  transform: scale(1.2);
+}
+
 /* Direct Links / Markdown Headers */
 .direct-link.direct-link {
   font-family: sans-serif;
@@ -316,6 +379,35 @@ a.direct-link:focus:visited,
   box-shadow: none;
 }
 
+.post {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 6rem;
+  max-width: var(--max-width);
+  width: 100%;
+}
+
+.post h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.post .post-meta-data {
+  display: flex;
+  align-items: center;
+}
+
+.post-description {
+  margin: 0 0 6vh 0;
+  font-size: 1.2rem;
+  color: var(--color-text-300);
+}
+
+.post .post-meta-data time {
+  flex: 1 4 100px;
+  text-align: end;
+  color: var(--color-text-300);
+}
 
 .related-posts-nav {
   display: flex;
@@ -352,7 +444,7 @@ a.direct-link:focus:visited,
 
 .text-fine {
   font-size: 0.75rem;
-  color: var(--color-text-300);
+  color: var(--color-text-400);
 }
 
 footer {
@@ -385,6 +477,33 @@ hr {
   border-top: 1px solid var(--color-text-400);
 }
 
+.archive-post {
+  display: grid;
+  grid-template-areas:
+    "date heading heading"
+    ". tags tags"
+    "   . excerpt excerpt";
+  grid-template-columns: 2fr 3fr 3fr;
+  grid-template-rows: auto;
+  margin: 0 0 3rem 0;
+}
+
+.archive-heading {
+  grid-area: heading;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.archive-date {
+  grid-area: date;
+  margin: .5rem 0 0 0;
+}
+
+.archive-excerpt {
+  grid-area: excerpt;
+  margin: .5rem 0 0 0;
+}
 
 a[href^="http"]::after {
   content: "↗";
@@ -401,6 +520,28 @@ a[href^="http"]:hover::after {
   font-weight: 800;
   color: var(--color-primary);
   transform: scale(1.4);
+}
+
+@media screen and (min-width: 800px) {
+  .archive-post {
+    grid-template-columns: 1.5fr 4fr 4fr;
+    gap: .5rem 2rem;
+    grid-template-areas:
+      "date heading excerpt"
+      "date tags    excerpt";
+  }
+}
+
+@media screen and (max-width: 614px) {
+  .archive-post {
+    grid-template-columns: 100%;
+    gap: 0 0;
+    grid-template-areas:
+      "date"
+      "heading"
+      "tags"
+      "excerpt";
+  }
 }
 
 .flex-row {

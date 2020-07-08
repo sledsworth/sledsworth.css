@@ -6,8 +6,8 @@
   "description": "Steven Ledsworth's pretty nice website.",
   "feed": {
     "subtitle": "Steven Ledsworth's pretty nice website.",
-    "filename": "feed.xml",
-    "path": "/feed/feed.xml",
+    "filename": "rss.xml",
+    "path": "rss",
     "id": "https://sledsworth.com/"
   },
   "author": {
