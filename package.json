@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Steven Ledsworth's personal blog.",
   "scripts": {
-    "build": "eleventy",
+    "clean": "rm -rf _site",
+    "build": "npm run clean && eleventy",
     "start": "eleventy --watch",
     "serve": "eleventy --serve",
     "debug": "DEBUG=* eleventy"
