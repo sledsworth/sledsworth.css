@@ -360,22 +360,27 @@ a.tag:hover {
 }
 
 /* Direct Links / Markdown Headers */
-.direct-link.direct-link {
+.post-header-link {
   font-family: sans-serif;
   text-decoration: none;
   font-style: normal;
   margin-left: 0.1em;
   box-shadow: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .15s ease-in-out;
 }
-a.direct-link,
-a.direct-link:visited {
+a.post-header-link,
+a.post-header-link:visited {
   color: var(--color-text-400);
 }
-a.direct-link:focus,
-a.direct-link:focus:visited,
-:hover > a.direct-link,
-:hover > a.direct-link:visited {
-  color: var(--color-primary);
+a.post-header-link:focus,
+a.post-header-link:focus:visited,
+:hover > a.post-header-link,
+:hover > a.post-header-link:visited {
+  visibility: visible;
+  opacity: 1.0;
+  color: var(--color-text-400);
   box-shadow: none;
 }
 

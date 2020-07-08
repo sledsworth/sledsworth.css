@@ -5,7 +5,7 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginNavigation = require('@11ty/eleventy-navigation');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
-const CleanCSS = require("clean-css");
+const CleanCSS = require('clean-css');
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginRss);
@@ -21,9 +21,9 @@ module.exports = function(eleventyConfig) {
 		return string.replace(/\s/g, '');
 	});
 
-  eleventyConfig.addFilter("cssmin", function(code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
+	eleventyConfig.addFilter('cssmin', function(code) {
+		return new CleanCSS({}).minify(code).styles;
+	});
 
 	eleventyConfig.addFilter('readableDate', dateObj => {
 		return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('LLL dd, yyyy');
@@ -56,8 +56,8 @@ module.exports = function(eleventyConfig) {
 		linkify: true,
 	}).use(markdownItAnchor, {
 		permalink: true,
-		permalinkClass: 'direct-link',
-		permalinkSymbol: '#',
+		permalinkClass: 'post-header-link',
+		permalinkSymbol: '§',
 	});
 	eleventyConfig.setLibrary('md', markdownLibrary);
 
