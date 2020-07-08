@@ -1,32 +1,32 @@
-.postlist {
+.post-list {
   list-style: none;
   padding: 0;
 }
-.postlist-item {
+.post-list-item {
   counter-increment: start-from -1;
   margin: 0 0 3rem;
 }
-.postlist-item:before {
+.post-list-item:before {
   display: inline-block;
   pointer-events: none;
   /* content: "" counter(start-from, decimal-leading-zero) ". "; */
   line-height: 100%;
   text-align: right;
 }
-.postlist-date,
-.postlist-item:before {
+.post-list-date,
+.post-list-item:before {
   font-size: 0.8125em; /* 13px /16 */
   color: var(--color-text-300);
 }
-.postlist-date {
+.post-list-date {
   word-spacing: -0.5px;
   display: block;
 }
-.postlist-link {
+.post-list-link {
   display: inline-block;
   padding: 0.25rem 0;
 }
-.postlist-item-active .postlist-link {
+.post-list-item-active .post-list-link {
   font-weight: bold;
 }
 

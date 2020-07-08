@@ -10,7 +10,7 @@
 			</li>
 			{%- endif -%} {% endfor %}
 		</ul>
-		<time class="postlist-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+		<time class="post-list-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 	</section>
 	{% if link %}
 	<h1><a href="{{ link | url }}">{{ title }}</a></h1>
