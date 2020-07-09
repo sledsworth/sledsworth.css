@@ -2,8 +2,8 @@
 title: Covid Isn’t A Respiratory Illness
 description: It’s a helluva lot worse than was predicated early on.
 tags:
-	- covid #covid
-	- health #health
+- covid #covid
+- health #health
 date: 2020-07-08
 link: https://www.nytimes.com/2020/06/26/opinion/coronavirus-brain-damage-dementia.html
 ---
