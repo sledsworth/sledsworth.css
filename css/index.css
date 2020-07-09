@@ -161,7 +161,6 @@ ul li::before {
 
 li {
   line-height: 1.75;
-  margin: 0 0 2rem;
   font-size: 1.2rem;
 }
 
@@ -372,7 +371,7 @@ footer .copyright {
 
 hr {
   border: none;
-  border-top: 1px solid var(--color-text-400);
+  border-top: 1px solid var(--color-text-500);
 }
 
 a[href^="http"]::after {
@@ -432,7 +431,7 @@ ol.no-list-style li::before {
 
 blockquote {
   padding: 0 0 0 1rem;
-  border-left: 3px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary-light);
   margin: -1.5rem 0 2rem 0;
 }
 
