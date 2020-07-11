@@ -4,6 +4,7 @@
   --color-text-300: rgba(255, 255, 255, 0.5);
   --color-text-400: rgba(255, 255, 255, 0.25);
   --color-text-500: rgba(255, 255, 255, 0.1);
+  --color-text-600: rgba(255, 255, 255, 0.03);
 
   /* --color-primary: #ffce00;
   --color-primary-dark: #775400;
@@ -14,7 +15,7 @@
   --color-primary-dark: #aaa;
   --color-background: black;
 
-  --max-width: 900px;
+  --max-width: 700px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,6 +25,7 @@
     --color-text-300: rgba(0, 0, 0, 0.5);
     --color-text-400: rgba(0, 0, 0, 0.25);
     --color-text-500: rgba(0, 0, 0, 0.1);
+    --color-text-600: rgba(0, 0, 0, 0.03);
 
     --color-primary: #333;
     --color-primary-light: #555;
@@ -84,9 +86,9 @@ p:last-child {
 }
 
 p {
-  line-height: 1.65rem;
+  /* line-height: 1.5rem; */
   margin: 0 0 2rem;
-  font-size: 1rem;
+  /* font-size: 1rem; */
 }
 
 p + ul, p + ol {
@@ -159,10 +161,10 @@ ul li::before {
   font-weight: 800;
 }
 
-li {
+/* li {
   line-height: 1.75;
   font-size: 1.2rem;
-}
+} */
 
 ol:not(.post-list) li {
   counter-increment: counter;
@@ -232,7 +234,7 @@ ol:not(.post-list) li::before {
 }
 
 .global-header-title {
-  margin: 0;
+  margin: .15rem 0 0;
   font-size: 1.5rem;
 }
 
@@ -246,6 +248,7 @@ ol:not(.post-list) li::before {
   font-size: 1.2rem;
   font-weight: 400;
   margin: 0;
+  line-height: 1.5rem;
 }
 
 .global-header-intro {
@@ -353,6 +356,18 @@ footer {
   align-items: center;
 }
 
+footer nav {
+  background: var(--color-text-600);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+}
+
 footer a {
   margin: 0 0.5rem;
 }
@@ -362,7 +377,7 @@ footer .copyright::before {
 }
 
 footer .copyright {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .flex-start {
@@ -408,13 +423,19 @@ a[href^="http"]:hover::after {
 }
 
 .flex-row.flex-paragraph p {
-  flex: 2 2 240px;
-  padding: 1rem;
+  flex: 2 2 300px;
+  padding: 1rem 2rem;
 }
 
 .flex-row.flex-paragraph p:nth-child(4n + 3) {
-  background: var(--color-text-500);
-  border-radius: 16px;
+  background: var(--color-text-600);
+  border-radius: 1rem;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086);
 }
 
 .flex-column {
@@ -430,9 +451,11 @@ ol.no-list-style li::before {
 }
 
 blockquote {
-  padding: 0 0 0 1rem;
-  border-left: 3px solid var(--color-primary-light);
-  margin: -1.5rem 0 2rem 0;
+  padding: 1rem 2rem;
+  /* border-left: 3px solid var(--color-primary-light); */
+  margin: -1rem 0 2rem 0;
+  background: var(--color-text-600);
+  border-radius: 1rem;
 }
 
 code {
