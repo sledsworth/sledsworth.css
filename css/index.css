@@ -2,9 +2,9 @@
   --color-text-100: rgba(255, 255, 255, 0.9);
   --color-text-200: rgba(255, 255, 255, 0.75);
   --color-text-300: rgba(255, 255, 255, 0.5);
-  --color-text-400: rgba(255, 255, 255, 0.25);
-  --color-text-500: rgba(255, 255, 255, 0.1);
-  --color-text-600: rgba(255, 255, 255, 0.03);
+  --color-text-400: rgba(255, 255, 255, 0.3);
+  --color-text-500: rgba(255, 255, 255, 0.2);
+  --color-text-600: rgba(255, 255, 255, 0.1);
 
   /* --color-primary: #ffce00;
   --color-primary-dark: #775400;

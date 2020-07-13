@@ -56,7 +56,7 @@
 
 .post-list-date {
   grid-area: date;
-  margin: .5rem 0 0 0;
+  margin: .75rem 0 0 0;
   color: var(--color-text-300);
   min-width: 6rem;
 }
