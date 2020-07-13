@@ -6,14 +6,12 @@
   width: 100%;
 }
 
-/* .post h1 {
-  margin: 0;
-  font-size: 2rem;
-} */
+.post h1 {
+  margin: .5rem 0;
+}
 
 .post .post-meta-data {
   display: flex;
-  align-items: center;
 }
 
 .post-description {

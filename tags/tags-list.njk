@@ -8,7 +8,7 @@ layout: layouts/generic.njk
 {% for tag in collections.tagList %}
   <li>
     {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-    <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+    <a href="{{ tagUrl | url }}" class="tag small-caps">{{ tag }}</a>
   </li>
 {% endfor %}
 </ul>

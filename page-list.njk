@@ -17,7 +17,7 @@ permalink: /page-list/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber
   <tbody>
 {%- for entry in entries %}
   <tr>
-    <td><a class="tag" href="{{ entry.url }}">{{ entry.url }}</a></td>
+    <td><a class="tag small-caps" href="{{ entry.url }}">{{ entry.url }}</a></td>
     <td>{{ entry.data.title }}</td>
   </tr>
 {%- endfor %}
