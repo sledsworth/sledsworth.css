@@ -7,13 +7,11 @@
 }
 
 .post h1 {
-  margin: 0;
-  font-size: 2rem;
+  margin: .5rem 0;
 }
 
 .post .post-meta-data {
   display: flex;
-  align-items: center;
 }
 
 .post-description {
@@ -31,4 +29,28 @@
 .post-content ol li,
 .post-content ul li {
   margin-bottom: .5rem;
+}
+
+.post-header-link {
+  font-family: sans-serif;
+  text-decoration: none;
+  font-style: normal;
+  margin-left: 0.1em;
+  box-shadow: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .15s ease-in-out;
+}
+a.post-header-link,
+a.post-header-link:visited {
+  color: var(--color-text-400);
+}
+a.post-header-link:focus,
+a.post-header-link:focus:visited,
+:hover > a.post-header-link,
+:hover > a.post-header-link:visited {
+  visibility: visible;
+  opacity: 1.0;
+  color: var(--color-text-400);
+  box-shadow: none;
 }

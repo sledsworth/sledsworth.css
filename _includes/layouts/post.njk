@@ -1,4 +1,11 @@
-{% extends "./base.njk" %} {% block announcement %} {% include "../announcement-banner.njk" %} {% endblock %} {% block content %} {% set previousPost = collections.posts | getPreviousCollectionItem(page) %} {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+{% extends "./base.njk" %}
+{% block announcement %}
+  {% include "../announcement-banner.njk" %}
+{% endblock %}
+
+{% block content %}
+{% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.posts | getNextCollectionItem(page) %}
 
 <article class="post">
 	<section class="post-meta-data">
@@ -6,11 +13,11 @@
 			{% for tag in tags %} {%- if collections.tagList.indexOf(tag) != -1 -%}
 			<li>
 				{% set tagUrl %}/tags/{{ tag }}/{% endset %}
-				<a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+				<a href="{{ tagUrl | url }}" class="tag small-caps">{{ tag }}</a>
 			</li>
 			{%- endif -%} {% endfor %}
 		</ul>
-		<time class="postlist-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+		<time class="post-list-date small-caps" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 	</section>
 	{% if link %}
 	<h1><a href="{{ link | url }}">{{ title }}</a></h1>
