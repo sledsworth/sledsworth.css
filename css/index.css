@@ -153,13 +153,13 @@ ul, ol {
 
 ul li::before {
   content: "\2022";
-  color: var(--color-text-300);
+  color: var(--color-text-400);
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1rem;
   width: 1rem;
   margin-left: -1rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 /* li {
@@ -173,7 +173,7 @@ ol:not(.post-list) li {
 }
 ol:not(.post-list) li::before {
   content: counter(counter) ".";
-  color: var(--color-text-300);
+  color: var(--color-text-400);
   font-weight: 900;
   font-size: .75rem;
   margin-right: .4rem;
