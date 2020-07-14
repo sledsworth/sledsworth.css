@@ -152,13 +152,14 @@ ul, ol {
 }
 
 ul li::before {
-  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: var(--color-text-400); /* Change the color */
-  font-weight: bolder; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1rem; /* Also needed for space (tweak if needed) */
-  margin-left: -1rem; /* Also needed for space (tweak if needed) */
-  font-weight: 800;
+  content: "\2022";
+  color: var(--color-text-300);
+  display: inline-block;
+  font-size: 1.3rem;
+  line-height: 1rem;
+  width: 1rem;
+  margin-left: -1rem;
+  font-weight: 900;
 }
 
 /* li {
@@ -172,15 +173,11 @@ ol:not(.post-list) li {
 }
 ol:not(.post-list) li::before {
   content: counter(counter) ".";
-  color: var(--color-text-400);
-  font-weight: bold;
+  color: var(--color-text-300);
+  font-weight: 900;
   font-size: .75rem;
-  margin-right: .5rem;
-}
-
-.post-content ol li,
-.post-content ul li {
-  margin-bottom: .5rem;
+  margin-right: .4rem;
+  margin-left: -1rem;
 }
 
 .container {
