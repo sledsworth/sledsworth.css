@@ -1,6 +1,5 @@
 ---
-title: Covid Isn’t A Respiratory Illness
-description: It’s a helluva lot worse than was predicated early on.
+title: Covid Isn’t Just A Respiratory Illness
 tags:
 - covid #covid
 - health #health
