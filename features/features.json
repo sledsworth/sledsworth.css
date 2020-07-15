@@ -1,7 +1,4 @@
 {
-  "layout": "layouts/generic.njk",
   "date": "Created",
-  "tags": [
-    "features"
-  ]
+  "tags": ["features"]
 }

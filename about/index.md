@@ -15,6 +15,8 @@ He works as a front-end developer and ill-equipped designer at an insurance comp
 
 He recently purchased a punching bag.
 
+He has totally bought into putting precious metals into random shit to—allegedly—make it smell better.
+
 He was told by his hair stylist that—while he can rest assured his hair is not thinning—it is receding and has sprouted some grays. Even though he had been suspect of this phenomenon years prior, it didn’t hurt any less to hear the news.
 
 He enjoys playing video games, although his middle-aged complacency has affected this aspect of his life as well. He misses the days when all you were expected to do in a shooting game was shoot—now, [one is expected to build a fortress][1] while doing so.
@@ -66,6 +68,6 @@ Finally, if you find any issues with the site please do let me know, especially 
 	</li>
 </ul>
 
-[1]:	https://www.epicgames.com/fortnite/en-US/home "Fortnite"
-[2]:	https://github.com/tc39/proposal-object-rest-spread/blob/master/Spread.md "Spread Operator"
-[3]:	https://www.allbirds.com/products/mens-wool-runners?variant=29692662727 "Allbirds"
+[1]: https://www.epicgames.com/fortnite/en-US/home "Fortnite"
+[2]: https://github.com/tc39/proposal-object-rest-spread/blob/master/Spread.md "Spread Operator"
+[3]: https://www.allbirds.com/products/mens-wool-runners?variant=29692662727 "Allbirds"
