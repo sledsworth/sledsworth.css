@@ -1,5 +1,5 @@
 ---
-layout: layouts/generic.njk
+layout: layouts/base.njk
 title: About Me
 templateClass: flex-row flex-paragraph
 eleventyNavigation:

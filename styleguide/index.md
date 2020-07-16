@@ -1,7 +1,6 @@
 ---
-layout: layouts/generic.njk
+layout: layouts/base.njk
 title: Style Guide
-templateClass: tmpl-post
 ---
 
 # Style Guide
@@ -10,13 +9,11 @@ This page is a way for me to quickly make sure I didn't make any visual oopsies.
 
 <ul class="colors"></ul>
 
-
-
 ## Heading 2
 
 This is a paragraph. It ought to be longer to be consider such. So that is what this is all about. Making more text. Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
 
-This is a paragraph. *It ought to be longer* to be consider such. So that is what this is all about. **Making more text.** Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
+This is a paragraph. _It ought to be longer_ to be consider such. So that is what this is all about. **Making more text.** Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
 
 This is a paragraph. It ought to be longer to be consider such. So that is what this is all about. Making more text. Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
 
@@ -38,7 +35,9 @@ class Thing: ParentClass, Protocol {
 This is a paragraph. It ought to be longer to be consider such. So that is what this is all about. Making more text. Easy as that. Of course, most paragraphs don't have such short sentences, so that explains the run on here. Think that's enough?
 
 ```css
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -66,7 +65,7 @@ this.javascript();
 const looks = {
   okay: true,
   ugly: false,
-  string: 'Hello World'
+  string: "Hello World",
 };
 ```
 
@@ -92,13 +91,11 @@ This is a paragraph. It ought to be longer to be consider such. So that is what 
 - Ori and the Blind Forest
 - Zelda: Breathe of the Wild
 
-
-
 1. Halo: Combat Evolved
 2. Zelda: Windwaker
 3. Mario Kart DS
 4. Ori and the Blind Forest
-4. Zelda: Breathe of the Wild
+5. Zelda: Breathe of the Wild
 
 <style>
 .colors {
