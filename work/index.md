@@ -1,5 +1,5 @@
 ---
-layout: layouts/generic.njk
+layout: layouts/base.njk
 title: Work
 templateClass: tmpl-post
 # eleventyNavigation:
@@ -8,6 +8,7 @@ templateClass: tmpl-post
 ---
 
 The work I have done:
+
 - Something
 - Something else
 - another thing

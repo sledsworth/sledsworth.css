@@ -1,7 +1,4 @@
 {% extends "./base.njk" %}
-{% block announcement %}
-  {% include "../announcement-banner.njk" %}
-{% endblock %}
 
 {% block content %}
 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}

@@ -1,5 +1,5 @@
 ---
-layout: layouts/generic.njk
+layout: layouts/base.njk
 title: About Me
 templateClass: flex-row flex-paragraph
 eleventyNavigation:
@@ -14,6 +14,8 @@ Steve is an anxious young adult gifted with the health and stamina of a middle-a
 He works as a front-end developer and ill-equipped designer at an insurance company.
 
 He recently purchased a punching bag.
+
+He has totally bought into putting precious metals into random shit to—allegedly—make it smell better.
 
 He was told by his hair stylist that—while he can rest assured his hair is not thinning—it is receding and has sprouted some grays. Even though he had been suspect of this phenomenon years prior, it didn’t hurt any less to hear the news.
 
@@ -66,6 +68,6 @@ Finally, if you find any issues with the site please do let me know, especially 
 	</li>
 </ul>
 
-[1]:	https://www.epicgames.com/fortnite/en-US/home "Fortnite"
-[2]:	https://github.com/tc39/proposal-object-rest-spread/blob/master/Spread.md "Spread Operator"
-[3]:	https://www.allbirds.com/products/mens-wool-runners?variant=29692662727 "Allbirds"
+[1]: https://www.epicgames.com/fortnite/en-US/home "Fortnite"
+[2]: https://github.com/tc39/proposal-object-rest-spread/blob/master/Spread.md "Spread Operator"
+[3]: https://www.allbirds.com/products/mens-wool-runners?variant=29692662727 "Allbirds"
