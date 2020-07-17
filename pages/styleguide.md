@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Style Guide
+permalink: /styleguide/
 ---
 
 # Style Guide

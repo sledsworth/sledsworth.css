@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 title: About Me
 templateClass: flex-row flex-paragraph
+permalink: /about/
 eleventyNavigation:
   key: About Me
   order: 3

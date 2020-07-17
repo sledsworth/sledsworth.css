@@ -51,9 +51,9 @@ module.exports = function (eleventyConfig) {
     require("./_11ty/getArchiveByMonth")
   );
 
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("fonts");
+  eleventyConfig.addPassthroughCopy("assets");
+  // eleventyConfig.addPassthroughCopy("css");
+  // eleventyConfig.addPassthroughCopy("fonts");
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
@@ -66,6 +66,7 @@ module.exports = function (eleventyConfig) {
       permalink: true,
       permalinkClass: "post-header-link",
       permalinkSymbol: "§",
+      level: 2,
     });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
@@ -87,7 +88,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    templateFormats: ["md", "njk", "html", "liquid"],
+    templateFormats: ["md", "njk", "html", "liquid", "css"],
 
     // If your site lives in a different subdirectory, change this.
     // Leading or trailing slashes are all normalized away, so don’t worry about those.
