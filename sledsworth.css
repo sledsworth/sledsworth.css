@@ -4,21 +4,92 @@
 	--spacing-s: .5rem;
 	--spacing: 1rem;
 	--spacing-m: 2rem;
+	--spacing-l: 4rem;
+
+	--max-width: 800px;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -27,7 +98,9 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -47,14 +120,14 @@ h1 {
 	font-size: 2rem;
 	margin: 3rem 0 2rem;
 	font-weight: 700;
-  line-height: 2rem;
+	line-height: 2rem;
 }
 
 h2 {
 	font-size: 1.75rem;
 	margin: 2.5rem 0 1.75rem;
 	font-weight: 500;
-  line-height: 2rem;
+	line-height: 2rem;
 }
 
 h3 {
@@ -95,12 +168,15 @@ ol {
 	margin: 0 0 2rem;
 }
 
-blockquote, q {
+blockquote,
+q {
 	quotes: none;
 }
 
-blockquote::before, blockquote::after,
-q::before, q::after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
 	content: '';
 	content: none;
 }
@@ -122,9 +198,9 @@ select {
 	font: inherit;
 }
 
-article > * + * {
+/* article > * + * {
 	margin-top: 1em;
-}
+} */
 
 @media (prefers-reduced-motion: reduce) {
 	* {
@@ -139,4 +215,15 @@ article > * + * {
 	font-size: .66rem;
 	text-transform: uppercase;
 	font-weight: 800;
+}
+
+.container {
+	margin: auto;
+	padding: 10vh calc(var(--spacing) + 1vw);
+	width: 100%;
+}
+
+.container > * {
+	max-width: var(--max-width);
+	margin: auto;
 }
