@@ -49,27 +49,13 @@
 
 /* The emerging W3C standard
    that is currently Firefox-only */
-* {
+/* * {
 	scrollbar-width: thin;
 	scrollbar-color: var(--color-text-500) var(--color-background);
-}
+} */
 
 /* Works on Chrome/Edge/Safari */
-*::-webkit-scrollbar {
-	width: 12px;
-}
-*::-webkit-scrollbar-track {
-	background: transparent;
-}
-*::-webkit-scrollbar-thumb {
-	background-color: var(--color-text-400);
-	border-radius: 20px;
-	border: 2px solid var(--color-background);
-}
 
-* {
-	box-sizing: border-box;
-}
 html,
 body {
 	font-family: system-ui, "Rubik", sans-serif;
@@ -267,6 +253,20 @@ ol:not(.post-list) li::before {
 
 .global-header-nav:last {
 	/* margin: 0.25rem 0 0; */
+}
+
+sup {
+  vertical-align: super;
+}
+
+sup a {
+  font-weight: 700;
+  font-size: .75rem;
+  color: var(--color-primary);
+}
+
+.footnote-item p {
+  display: inline-block;
 }
 
 @media screen and (max-width: 614px) {
