@@ -2,6 +2,11 @@
 
 ## Docs
 
+### Templating
+
+- `templateClass` metadata allows for overriding the `container` class that is applied to the `main` element by default. This allows for creation of custom feature pages that can expand the entire width of the page.
+- `container` is full width, but forces child components to have a max width of the css var `--max-width`
+
 # eleventy-base-blog
 
 A starter repository showing how to build a blog with the [Eleventy](https://github.com/11ty/eleventy) static site generator.

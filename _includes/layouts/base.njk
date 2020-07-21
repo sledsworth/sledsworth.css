@@ -28,7 +28,6 @@
     <header class="container">
       <div class="global-header">
         <section class="gobal-header-title-section">
-          <!-- <div class="global-header-intro"><h2>A website by</h2></div> -->
           <h1 class="global-header-title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
           <div class="global-header-tagline"><h2><a href="/about">Steve Ledsworth</a>{{ metadata.description | replace('Steve Ledsworth', '') }}</h2></div>
         </section>
@@ -40,14 +39,14 @@
         </ul>
       </div>
     </header>
-    <main {% if templateClass %}class="{{ templateClass }}"{% else %}class="container"{% endif %}">
+    <main class="{% if templateClass %}{{ templateClass }}{% else %}container{% endif %}">
       {% block content %}
         {{ content | safe }}
       {% endblock %}
     </main>
     <footer>
       <nav class="card">
-        <a href="/rss">RSS</a>
+        <a href="/rss.xml">RSS</a>
         <a href="mailto:sledsworth@mac.com">Email</a>
         <a href="https://twitter.com/sledsworth">Twitter</a>
         <a href="https://github.com/sledsworth">Github</a>
@@ -56,8 +55,13 @@
       <p id="copyright" class="text-fine copyright">2020 Steven Ledsworth</p>
     </footer>
     <script>
-      document.querySelector('#copyright').innerHTML = new Date().getFullYear() + ' Steven Ledsworth';
+      var currentYear = new Date().getFullYear();
+      var initialYear = 2020;
+      if (initialYear === currentYear) {
+        document.querySelector('#copyright').innerHTML = '© ' + initialYear + ' Steven Ledsworth';
+      } else {
+        document.querySelector('#copyright').innerHTML = '© ' + initialYear + ' - ' + currentYear + ' Steven Ledsworth';
+      }
     </script>
-    <!-- Current page: {{ page.url | url }} -->
   </body>
 </html>
