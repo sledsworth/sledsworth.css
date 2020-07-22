@@ -251,14 +251,6 @@ ol:not(.post-list) li::before {
   margin: 0;
 }
 
-.global-header-nav:last {
-  /* margin: 0.25rem 0 0; */
-}
-
-sup {
-  vertical-align: super;
-}
-
 sup a {
   font-weight: 700;
   font-size: 0.75rem;

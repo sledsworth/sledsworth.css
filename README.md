@@ -13,11 +13,6 @@ A starter repository showing how to build a blog with the [Eleventy](https://git
 
 [![Build Status](https://travis-ci.org/11ty/eleventy-base-blog.svg?branch=master)](https://travis-ci.org/11ty/eleventy-base-blog)
 
-## Demos
-
-- [Netlify](https://eleventy-base-blog.netlify.com/)
-- [GitHub Pages](https://11ty.github.io/eleventy-base-blog/)
-
 ## Deploy this to your own site
 
 These builders are amazing—try them out to get your own Eleventy site in a few clicks!
