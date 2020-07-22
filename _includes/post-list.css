@@ -6,20 +6,24 @@
 .post-list-item {
   display: grid;
   grid-template-areas:
-  "date heading heading"
-  ". tags tags"
-  "   . excerpt excerpt";
+    "date heading heading"
+    ". tags tags"
+    "   . excerpt excerpt";
   grid-template-columns: 2fr 3fr 3fr;
   grid-template-rows: auto;
   margin: 0 0 3rem 0;
 }
 
+.post-list-divider {
+  margin: 4rem 0 0.25rem 0;
+}
+
 .post-list-link-item {
   display: grid;
   grid-template-areas:
-  "date heading heading"
-  ". tags tags"
-  "   . excerpt excerpt";
+    "date heading heading"
+    ". tags tags"
+    "   . excerpt excerpt";
   grid-template-columns: 2fr 3fr 3fr;
   grid-template-rows: auto;
   margin: 0 0 3rem 0;
@@ -30,35 +34,36 @@
     grid-template-columns: 100%;
     gap: 0 0;
     grid-template-areas:
-    "date"
-    "heading"
-    "tags"
-    "excerpt";
+      "date"
+      "heading"
+      "tags"
+      "excerpt";
   }
 
   .post-list-link-item {
     grid-template-columns: 100%;
     gap: 0 0;
     grid-template-areas:
-    "date"
-    "heading"
-    "tags"
-    "excerpt";
+      "date"
+      "heading"
+      "tags"
+      "excerpt";
   }
 }
 
 .post-list-item-heading {
   grid-area: heading;
-  margin: .25rem 0 0;
-  font-size: 1.4rem;
-  font-weight: 400;
+  margin: 0;
+}
+
+.post-list-item-heading a {
+  font-weight: 800;
+  color: var(--color-text-dark);
 }
 
 .post-list-date {
   grid-area: date;
-  margin: .5rem 0 0 0;
-  color: var(--color-text-300);
-  min-width: 6rem;
+  color: var(--color-text-light);
 }
 
 .post-list-item-excerpt {

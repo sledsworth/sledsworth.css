@@ -1,56 +1,95 @@
 .post {
-	/* max-width: var(--max-width-s); */
+  margin: 0 auto var(--space-vertical);
 }
 
 .post h1 {
-	margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .post .post-meta-data {
-	display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
 }
 
 .post-description {
-	margin: 0 0 6vh 0;
-	font-size: 1.2rem;
-	color: var(--color-text-300);
-}
-
-.post .post-meta-data time {
-	flex: 1 4 100px;
-	text-align: end;
-	color: var(--color-text-300);
+  margin: 0 0 6vh 0;
+  font-size: 1.2rem;
+  color: var(--color-text-light);
 }
 
 .post-content {
-	margin-bottom: var(--spacing-l);
+  margin-bottom: var(--spacing-l);
 }
 
 .post-content ol li,
 .post-content ul li {
-	margin: 0 0 .5rem 1.5rem;
+  margin: 0 0 0.5rem 1.5rem;
 }
 
 .post-header-link {
-	font-family: sans-serif;
-	text-decoration: none;
-	font-style: normal;
-	margin-left: 0.1em;
-	box-shadow: none;
-	visibility: hidden;
-	opacity: 0;
-	transition: all .15s ease-in-out;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-style: normal;
+  margin-left: 0.1em;
+  box-shadow: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
 }
 a.post-header-link,
 a.post-header-link:visited {
-	color: var(--color-text-400);
+  color: var(--color-text-light);
 }
 a.post-header-link:focus,
 a.post-header-link:focus:visited,
 :hover > a.post-header-link,
 :hover > a.post-header-link:visited {
-	visibility: visible;
-	opacity: 1.0;
-	color: var(--color-text-400);
-	box-shadow: none;
+  visibility: visible;
+  opacity: 1;
+  color: var(--color-text-light);
+  box-shadow: none;
+}
+
+.related-posts-nav {
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.related-posts-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.related-posts-nav li {
+  flex: 2 2 100px;
+}
+
+.related-posts-nav label {
+  flex: 1 1 100px;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: var(--color-text-light);
+  font-variant: all-small-caps;
+  font-weight: 800;
+}
+
+.related-posts-nav .home {
+  margin: 1.5rem auto 0;
+  text-align: center;
+}
+
+.related-posts-nav ul li:first-child {
+  margin: 0 2rem 0 0;
+  align-items: flex-start;
+}
+
+.related-posts-nav ul li:last-child {
+  margin: 0 0 0 2rem;
+  align-items: flex-end;
+  text-align: right;
 }

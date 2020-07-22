@@ -18,7 +18,7 @@
 }
 
 .announcement a:after {
-  color: var(--color-text-300);
+  color: var(--color-text);
 }
 
 .announcement {
@@ -38,7 +38,7 @@
 }
 
 .announcement * {
-  color: var(--color-text-200);
+  color: var(--color-text-dark);
 }
 
 .announcement h2 {
@@ -52,7 +52,7 @@
 }
 
 .announcement .description {
-  color: var(--color-text-200);
+  color: var(--color-text-dark);
   grid-area: description;
 }
 

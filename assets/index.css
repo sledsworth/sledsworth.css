@@ -1,46 +1,23 @@
 :root {
-  --color-text-100: rgba(255, 255, 255, 0.9);
-  --color-text-200: rgba(255, 255, 255, 0.75);
-  --color-text-300: rgba(255, 255, 255, 0.5);
-  --color-text-400: rgba(255, 255, 255, 0.3);
-  --color-text-500: rgba(255, 255, 255, 0.2);
-  --color-text-600: rgba(255, 255, 255, 0.1);
-
-  /* --color-primary: #ffce00;
-  --color-primary-dark: #775400;
-  --color-background: #1d1a20;
- */
-  --color-primary: #ccc;
-  --color-primary-light: white;
-  --color-primary-dark: #aaa;
-  --color-background: black;
+  --color-primary: #ffce00;
+  --color-background: white;
 
   --max-width-s: 500px;
-  --max-width: 700px;
   --max-width-l: 900px;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --color-text-100: rgba(0, 0, 0, 0.9);
-    --color-text-200: rgba(0, 0, 0, 0.75);
-    --color-text-300: rgba(0, 0, 0, 0.5);
-    --color-text-400: rgba(0, 0, 0, 0.25);
-    --color-text-500: rgba(0, 0, 0, 0.1);
-    --color-text-600: rgba(0, 0, 0, 0.03);
-
-    --color-primary: #333;
-    --color-primary-light: #555;
-    --color-primary-dark: black;
-    --color-background: white;
+    --color-primary: #ffce00;
+    --color-background: black;
   }
 }
 
-@supports (color: color(display-p3 1 1 1 / 1)) {
+/* @supports (color: color(display-p3 1 1 1 / 1)) {
   :root {
     --color-primary: color(display-p3 1 0.701 0.222);
   }
-}
+} */
 
 @font-face {
   font-family: "Dosis";
@@ -51,7 +28,7 @@
    that is currently Firefox-only */
 /* * {
 	scrollbar-width: thin;
-	scrollbar-color: var(--color-text-500) var(--color-background);
+	scrollbar-color: var(--color-text-light) var(--color-background);
 } */
 
 /* Works on Chrome/Edge/Safari */
@@ -59,7 +36,7 @@
 html,
 body {
   font-family: system-ui, "Rubik", sans-serif;
-  color: var(--color-text-200);
+  color: var(--color-text-dark);
   background-color: var(--color-background);
   display: flex;
   flex-direction: column;
@@ -82,26 +59,26 @@ p + ol {
   margin: -1.5rem 0 2rem 0;
 }
 
-nav a,
+/* nav a,
 header li a {
   display: inline-block;
-}
+} */
 
 a {
   display: inline;
   text-decoration: none;
-  color: var(--color-text-100);
+  color: var(--color-text-dark);
   border-bottom: 0;
-  box-shadow: 0px -2px var(--color-text-500) inset;
+  box-shadow: 0px -2px var(--color-primary) inset;
   font-weight: 500;
   transition: all 0.15s ease-in-out;
 }
 a:hover {
-  box-shadow: 0px -6px var(--color-text-500) inset;
+  box-shadow: 0px -6px var(--color-primary) inset;
 }
 
 a:visited {
-  color: var(--color-text-100);
+  color: var(--color-text-dark);
 }
 
 main {
@@ -122,7 +99,7 @@ table {
 table td,
 table th {
   padding: 0.5rem;
-  border-top: 1px solid var(--color-text-500);
+  border-top: 1px solid var(--color-text-light);
   text-align: left;
 }
 
@@ -138,7 +115,7 @@ ol {
 
 ul li::before {
   content: "\2022";
-  color: var(--color-text-400);
+  color: var(--color-text-light);
   display: inline-block;
   font-size: 1.2rem;
   line-height: 1rem;
@@ -158,7 +135,7 @@ ol:not(.post-list) li {
 }
 ol:not(.post-list) li::before {
   content: counter(counter) ".";
-  color: var(--color-text-400);
+  color: var(--color-text);
   font-weight: 900;
   font-size: 0.75rem;
   margin-right: 0.4rem;
@@ -221,7 +198,7 @@ ol:not(.post-list) li::before {
 }
 
 .global-header-tagline h2 {
-  color: var(--color-text-300);
+  color: var(--color-text);
   font-size: 1.2rem;
   font-weight: 400;
   margin: 0;
@@ -233,7 +210,7 @@ ol:not(.post-list) li::before {
 }
 
 .global-header-intro h2 {
-  color: var(--color-text-400);
+  color: var(--color-text);
   font-size: 0.8rem;
   font-weight: 800;
   margin: 0;
@@ -289,42 +266,9 @@ sup a {
   box-shadow: 0px -3px var(--color-primary) inset;
 }
 
-.related-posts-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  max-width: var(--max-width);
-}
-
-.related-posts-nav label {
-  flex: 1 1 100px;
-  display: flex;
-  flex-direction: column;
-  text-transform: capitalize;
-  font-size: 1rem;
-  color: var(--color-text-400);
-}
-
-.related-posts-nav .home {
-  margin: 1.5rem auto 0;
-}
-
-.related-posts-nav label:first-child {
-  margin: 0 2rem 0 0;
-  align-items: flex-start;
-}
-
-.related-posts-nav label:last-child {
-  margin: 0 0 0 2rem;
-  align-items: flex-end;
-  text-align: right;
-}
-
 .text-fine {
   font-size: 0.75rem;
-  color: var(--color-text-400);
+  color: var(--color-text-light);
 }
 
 footer {
@@ -337,7 +281,7 @@ footer {
 }
 
 footer nav {
-  background: var(--color-text-600);
+  background: var(--color-container);
   padding: 1rem 2rem;
   border-radius: 1rem;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -359,14 +303,14 @@ footer .copyright {
 
 hr {
   border: none;
-  border-top: 1px solid var(--color-text-500);
+  border-top: 1px solid var(--color-text-light);
 }
 
 a[href^="http"]::after {
   content: "↗";
   padding-left: 0.125rem;
   font-weight: 800;
-  color: var(--color-text-400);
+  color: var(--color-text-light);
   display: inline-block;
   transition: all 0.15s ease-in-out;
 }
@@ -401,7 +345,7 @@ a[href^="http"]:hover::after {
 }
 
 .flex-row.flex-paragraph p:nth-child(4n + 3) {
-  background: var(--color-text-600);
+  background: var(--color-container);
   border-radius: 1rem;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -422,14 +366,13 @@ ol.no-list-style li::before {
 
 blockquote {
   padding: 1rem 2rem;
-  /* border-left: 3px solid var(--color-primary-light); */
   margin: -1rem 0 2rem 0;
-  background: var(--color-text-600);
+  background: var(--color-container);
   border-radius: 1rem;
 }
 
 code {
-  background: var(--color-text-500);
+  background: var(--color-container);
   font-family: monospace;
   padding: 0.15rem 0.25rem;
   border-radius: 4px;
