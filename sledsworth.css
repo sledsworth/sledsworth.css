@@ -25,7 +25,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: white;
-    --color-text-light: rgba(255, 255, 255, , 0.3);
+    --color-text-light: rgba(255, 255, 255, 0.3);
     --color-text: rgba(255, 255, 255, 0.5);
     --color-text-dark: rgba(255, 255, 255, 0.9);
     --color-container: rgba(255, 255, 255, 0.1);
