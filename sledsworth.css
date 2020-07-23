@@ -239,7 +239,7 @@ select {
 }
 
 .small-caps {
-  font-size: 0.66rem;
+  font-size: var(--font-size-s);
   text-transform: uppercase;
   font-weight: 800;
 }
