@@ -4,6 +4,10 @@
 
   --max-width-s: 500px;
   --max-width-l: 900px;
+
+  --shadow-l: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,6 +49,9 @@ body {
   width: 100%;
   letter-spacing: 0.01rem;
   word-spacing: 0.01rem;
+  /* background: linear-gradient(217deg, #e9e8f2aa, #e9e8f2ff 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);; */
+  /* background: rgba(0,0,0,0.8);
+backdrop-filter: saturate(180%) blur(10px); */
 }
 p:last-child {
   margin-bottom: 0;
@@ -192,25 +199,6 @@ sup a {
   }
 }
 
-/* Nav */
-.nav {
-  padding: 0;
-  list-style: none;
-  margin-left: 1em;
-}
-.nav-item {
-  display: inline-block;
-  margin: 0 0 0.3rem 0;
-}
-
-.nav-item a:not(:hover) {
-  text-decoration: none;
-}
-.nav-item-active a {
-  font-weight: 700;
-  box-shadow: 0px -3px var(--color-primary) inset;
-}
-
 .text-fine {
   font-size: 0.75rem;
   color: var(--color-text-light);
@@ -229,9 +217,7 @@ footer nav {
   background: var(--color-container);
   padding: 1rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+  box-shadow: var(--shadow-l);
 }
 
 footer a {
@@ -240,10 +226,6 @@ footer a {
 
 footer .copyright {
   margin-top: 1rem;
-}
-
-.flex-start {
-  align-self: flex-start;
 }
 
 hr {
@@ -292,16 +274,11 @@ a[href^="http"]:hover::after {
 .flex-row.flex-paragraph p:nth-child(4n + 3) {
   background: var(--color-container);
   border-radius: 1rem;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+  box-shadow: var(--shadow-l);
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.flex-start {
+  align-self: flex-start;
 }
 
 ul.no-list-style li::before,
@@ -334,7 +311,5 @@ strong {
 
 img:not([src$=".svg"]) {
   border-radius: 16px;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+  box-shadow: var(--shadow-l);
 }

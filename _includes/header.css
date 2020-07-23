@@ -5,7 +5,7 @@
 }
 
 .gobal-header-title-section {
-  flex: 3 1;
+  flex: 10 1;
 }
 
 .global-header-title {
@@ -41,10 +41,23 @@
 }
 
 .global-header-nav {
-  flex: 1;
+  flex: 2 2 200px;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin: 0;
+  justify-content: space-between;
+  margin: 0.5rem 0 0 0;
+}
+
+.nav {
+  padding: 0;
+  list-style: none;
+  margin-left: 1em;
+}
+
+.nav-item a:not(:hover) {
+  text-decoration: none;
+}
+.nav-item-active a {
+  font-weight: 700;
+  box-shadow: 0px -3px var(--color-primary) inset;
 }
