@@ -1,10 +1,7 @@
 :root {
-  --color-text-100: rgba(255, 255, 255, 0.9);
-  --color-text-200: rgba(255, 255, 255, 0.75);
-  --color-text-300: rgba(255, 255, 255, 0.5);
-  --color-text-400: rgba(255, 255, 255, 0.3);
-  --color-text-500: rgba(255, 255, 255, 0.2);
-  --color-text-600: rgba(255, 255, 255, 0.1);
+  --color-text-light: rgba(255, 255, 255, , 0.1);
+  --color-text: rgba(255, 255, 255, 0.5);
+  --color-text-dark: rgba(255, 255, 255, 0.9);
   --color-background: #000000;
   --color-primary: #ffce00;
 }
@@ -23,7 +20,7 @@
 
 .announcement {
   display: grid;
-  grid-template-areas: "header      header" "description links";
+  grid-template-areas: "header header" "description links";
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
@@ -63,7 +60,7 @@
 
 .announcement li {
   list-style: none;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.25rem;
 }
 
 .announcement .links {

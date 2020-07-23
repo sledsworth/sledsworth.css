@@ -173,61 +173,6 @@ ol:not(.post-list) li::before {
   background-color: #902f2f;
 }
 
-/* Header */
-.global-header {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  max-width: var(--max-width);
-  margin: auto;
-}
-
-.gobal-header-title-section {
-  flex: 3 1;
-}
-
-.global-header-title {
-  margin: 0.15rem 0 0;
-  font-size: 1.5rem;
-}
-
-.global-header-tagline {
-  max-width: 400px;
-  margin: 0.25rem 2rem 2rem 0;
-}
-
-.global-header-tagline h2 {
-  color: var(--color-text);
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin: 0;
-  line-height: 1.5rem;
-}
-
-.global-header-intro {
-  margin: 0;
-}
-
-.global-header-intro h2 {
-  color: var(--color-text);
-  font-size: 0.8rem;
-  font-weight: 800;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.global-header-nav {
-  flex: 1;
-  padding: 0;
-  display: flex;
-  /* justify-content: flex-end; */
-  /* margin: 2rem 0 0; */
-  flex-direction: column;
-  align-items: flex-end;
-  margin: 0;
-}
-
 sup a {
   font-weight: 700;
   font-size: 0.75rem;
