@@ -15,10 +15,10 @@
   --max-width: 700px;
 
   --color-primary: black;
-  --color-text-light: rgba(0, 0, 0, 0.3);
+  --color-text-light: rgba(0, 0, 0, 0.4);
   --color-text: rgba(0, 0, 0, 0.6);
   --color-text-dark: rgba(0, 0, 0, 0.8);
-  --color-container: rgba(0, 0, 0, 0.03);
+  --color-container: rgba(0, 0, 0, 0.05);
   --color-background: white;
 }
 
@@ -159,7 +159,6 @@ h2 {
 }
 
 h3 {
-  color: ;
   font-size: var(--font-size-l);
   margin: 2rem 0 1.5rem;
   font-weight: 600;
@@ -208,7 +207,6 @@ blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-  content: "";
   content: none;
 }
 
