@@ -1,9 +1,9 @@
 ---
 layout: layouts/base.njk
-title: About Me
+title: About
 permalink: /about/
 eleventyNavigation:
-  key: About Me
+  key: About
   order: 3
 ---
 
