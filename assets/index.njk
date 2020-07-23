@@ -1,0 +1,13 @@
+---
+permalink: /index.css
+---
+{% set css %}
+  {% include "assets/sledsworth.css/sledsworth.css" %}
+  {% include "assets/index.css" %}
+  {% include "post-list.css" %}
+  {% include "post.css" %}
+  {% include "tags.css" %}
+  {% include "header.css" %}
+  {% include "assets/prism-duo-tone-space.css" %}
+{% endset %}
+{{ css | safe }}

@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Work
-templateClass: tmpl-post
+permalink: /work/
 # eleventyNavigation:
 #   key: Work
 #   order: 4

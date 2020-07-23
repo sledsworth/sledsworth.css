@@ -27,8 +27,22 @@
   </section>
 </article>
 <nav class="related-posts-nav">
-	<label> {% if nextPost %}← Newer <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %} </label>
-	<label><a class="home" href="{{ '/' | url }}">Home</a></label>
-	<label> {% if previousPost %}Older → <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %} </label>
+	<ul class="no-list-style">
+	{% if nextPost %}
+	<li>
+		<label>← Newer</label>
+		<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+	</li>
+	{% endif %}
+		<li class="home">
+			<a href="/">Home</a>
+		</li>
+	{% if previousPost %}
+		<li>
+			<label>Older →</label>
+			<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+		</li>
+	{% endif %}
+	</ul>
 </nav>
 {% endblock %}

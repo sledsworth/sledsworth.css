@@ -1,0 +1,28 @@
+.tag-list {
+	display: flex;
+	flex-wrap: wrap;
+	grid-area: tags;
+	margin: 0;
+}
+
+a.tag {
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	margin: 0.25rem 0.5rem 0.25rem 0;
+	background-color: var(--color-container);
+	color: var(--color-text-light);
+	border-radius: 0.25rem;
+	text-decoration: none;
+	box-shadow: none;
+}
+
+a.tag:hover {
+	transform: scale(1.15);
+	border-radius: 0.4rem;
+	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+		0 12.5px 10px rgba(0, 0, 0, 0.06);
+}
+
+.tag-heading {
+	text-transform: capitalize;
+}

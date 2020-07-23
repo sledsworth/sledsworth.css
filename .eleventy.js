@@ -5,6 +5,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownFootnotes = require("markdown-it-footnote");
 const CleanCSS = require("clean-css");
 
 module.exports = function (eleventyConfig) {
@@ -36,6 +37,10 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
 
+  eleventyConfig.addFilter("keywordsFromTags", (list, filter = []) => {
+    return list.filter((item) => filter.indexOf(item) == -1).join(", ");
+  });
+
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
     if (n < 0) {
@@ -51,9 +56,9 @@ module.exports = function (eleventyConfig) {
     require("./_11ty/getArchiveByMonth")
   );
 
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("fonts");
+  eleventyConfig.addPassthroughCopy("assets");
+  // eleventyConfig.addPassthroughCopy("css");
+  // eleventyConfig.addPassthroughCopy("fonts");
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
@@ -61,11 +66,12 @@ module.exports = function (eleventyConfig) {
     breaks: true,
     linkify: true,
   })
-    .use(require("markdown-it-footnote"))
+    .use(markdownFootnotes)
     .use(markdownItAnchor, {
       permalink: true,
       permalinkClass: "post-header-link",
       permalinkSymbol: "§",
+      level: 2,
     });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
@@ -87,7 +93,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    templateFormats: ["md", "njk", "html", "liquid"],
+    templateFormats: ["md", "njk", "html", "liquid", "css"],
 
     // If your site lives in a different subdirectory, change this.
     // Leading or trailing slashes are all normalized away, so don’t worry about those.
