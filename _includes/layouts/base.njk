@@ -4,18 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if renderData.title %}
-    <title>{{ renderData.title  + ' | ' + metadata.siteTitle }}</title>
+    <title>{{ renderData.title  + ' | ' + metadata.tite }}</title>
     {% elif title %}
-    <title>{{ title + ' | ' + metadata.siteTitle }}</title>
+    <title>{{ title + ' | ' + metadata.title }}</title>
     {% else %}
-    <title>{{ metadata.siteTitle }}</title>
+    <title>{{ metadata.title }}</title>
     {% endif %}
-    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
-    <link rel="stylesheet" href="{{ '/css/sledsworth.css/sledsworth.css' | url }}">
+    <meta name = "keywords" content="{{ (tags or collections.tagList) | keywordsFromTags(['posts', 'features']) }}" />
+    <meta name="description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-duo-tone-space.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7441298/6024412/css/fonts.css" />
     {% block css %}
     {% endblock %}
   </head>
@@ -29,9 +28,8 @@
     <header class="container">
       <div class="global-header">
         <section class="gobal-header-title-section">
-          <!-- <div class="global-header-intro"><h2>A website by</h2></div> -->
           <h1 class="global-header-title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-          <div class="global-header-tagline"><h2>{{ metadata.tagline }}</h2></div>
+          <div class="global-header-tagline"><h2 class=""><a href="/about">Steve Ledsworth</a>{{ metadata.description | replace('Steve Ledsworth', '') }}</h2></div>
         </section>
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
         <ul class="global-header-nav no-list-style">
@@ -41,14 +39,14 @@
         </ul>
       </div>
     </header>
-    <main {% if templateClass %}class="{{ templateClass }}"{% else %}class="home"{% endif %}>
+    <main class="{% if templateClass %}{{ templateClass }}{% else %}container{% endif %}">
       {% block content %}
         {{ content | safe }}
       {% endblock %}
     </main>
     <footer>
       <nav class="card">
-        <a href="/rss">RSS</a>
+        <a href="/rss.xml">RSS</a>
         <a href="mailto:sledsworth@mac.com">Email</a>
         <a href="https://twitter.com/sledsworth">Twitter</a>
         <a href="https://github.com/sledsworth">Github</a>
@@ -57,8 +55,13 @@
       <p id="copyright" class="text-fine copyright">2020 Steven Ledsworth</p>
     </footer>
     <script>
-      document.querySelector('#copyright').innerHTML = new Date().getFullYear() + ' Steven Ledsworth';
+      var currentYear = new Date().getFullYear();
+      var initialYear = 2020;
+      if (initialYear === currentYear) {
+        document.querySelector('#copyright').innerHTML = '© ' + initialYear + ' Steven Ledsworth';
+      } else {
+        document.querySelector('#copyright').innerHTML = '© ' + initialYear + ' - ' + currentYear + ' Steven Ledsworth';
+      }
     </script>
-    <!-- Current page: {{ page.url | url }} -->
   </body>
 </html>

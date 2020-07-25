@@ -1,13 +1,15 @@
 ---
 layout: layouts/base.njk
-title: About Me
-templateClass: flex-row flex-paragraph
+title: About
+permalink: /about/
 eleventyNavigation:
-  key: About Me
+  key: About
   order: 3
 ---
 
 # About Steve
+
+<section class="flex-row flex-paragraph">
 
 Steve is an anxious young adult gifted with the health and stamina of a middle-aged man.
 
@@ -56,6 +58,8 @@ Please, if I’ve said anything dimwitted (likely)--or you just want to chat--ge
 If you like my work--software, design, writing or otherwise--drop me a line. While I have a day job, I won’t turn down work that I find interesting!
 
 Finally, if you find any issues with the site please do let me know, especially if they are accessibility problems—web standards are important to me and I believe in providing the best experience possible for all users.
+
+</section>
 
 <ul class=“label-list”>
 	<li>

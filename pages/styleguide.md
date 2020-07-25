@@ -1,13 +1,16 @@
 ---
 layout: layouts/base.njk
 title: Style Guide
+permalink: /styleguide/
 ---
 
 # Style Guide
 
 This page is a way for me to quickly make sure I didn't make any visual oopsies.
 
-<ul class="colors"></ul>
+<section class="post-content">
+
+## Mock Blog Post
 
 ## Heading 2
 
@@ -97,13 +100,30 @@ This is a paragraph. It ought to be longer to be consider such. So that is what 
 4. Ori and the Blind Forest
 5. Zelda: Breathe of the Wild
 
+## Headings
+
+# One Big Heading That Will Wrap to the Next Line
+
+## Two Big Heading That Will Wrap to the Next Line
+
+### Three Big Heading That Will Wrap to the Next Line
+
+#### Four Big Heading That Will Wrap to the Next Line
+
+##### Five Big Heading That Will Wrap to the Next Line
+
+</section>
+
+## Variables
+
+<ul class="colors"></ul>
+
 <style>
 .colors {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   list-style: none;
-  margin: 0;
   padding: 0;
   width: 100%;
   list-style: none;
@@ -124,14 +144,14 @@ This is a paragraph. It ought to be longer to be consider such. So that is what 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.color__swatch {
+.color--swatch {
   background-color: var(--color);
   border-radius: 2px 2px 0 0;
   display: block;
   height: 11rem;
 }
 
-.color__details {
+.color--details {
   font-size: 1.375rem;
   padding: 0.5rem;
   text-align: right;
@@ -148,6 +168,7 @@ This is a paragraph. It ought to be longer to be consider such. So that is what 
   width: 100%;
 }
 </style>
+
 <script>
 /*
  Check if the stylesheet is internal or hosted on the current domain.
@@ -204,10 +225,10 @@ const cssCustomPropIndex = getCSSCustomPropIndex();
 // Add the swatches to the DOM
 document.querySelector(".colors").innerHTML = cssCustomPropIndex.reduce(
   (str, [prop, val]) => `${str}<li class="color">
-    <b class="color__swatch" style="--color: ${val}"></b>
-    <div class="color__details">
-      <input value="${prop}" readonly />
-      <input value="${val}" readonly />
+    <b class="color--swatch" style="--color: ${val}"></b>
+    <div class="color--details">
+      <div style="background: var(--color);"></div>
+      <p>${prop}</p>
     </div>
    </li>`,
   ""

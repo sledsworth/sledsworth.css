@@ -1,6 +1,8 @@
 ---
 title: Mitigating a 754 Million PPS DDoS Attack Automatically
 link: https://blog.cloudflare.com/mitigating-a-754-million-pps-ddos-attack-automatically/?utm_campaign=blog&utm_source=facebook,linkedin,twitter&utm_medium=Cloudflare,Cloudflare,+Inc.&utm_content=no_humans_involved:_mitig
+tags:
+- tech #tech
 date: 2020-07-09
 ---
 

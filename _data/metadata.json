@@ -1,17 +1,15 @@
 {
-  "title": "Steven Ledsworth",
-  "siteTitle": "sledsworth.com",
-  "tagline": "On programming, games, life, and sourdough.",
+  "title": "sledsworth.com",
   "url": "https://sledsworth.com/",
-  "description": "Steven Ledsworth's pretty nice website.",
+  "description": "Steve Ledsworth's ramblings on programming, videogames, and sourdough.",
   "feed": {
-    "subtitle": "Steven Ledsworth's pretty nice website.",
+    "subtitle": "Steve Ledsworth's ramblings on programming, videogames, and sourdough.",
     "filename": "rss.xml",
     "path": "rss",
     "id": "https://sledsworth.com/"
   },
   "author": {
-    "name": "Steven Ledsworth",
+    "name": "Steve Ledsworth",
     "email": "sledsworth@gmail.com"
   }
 }
