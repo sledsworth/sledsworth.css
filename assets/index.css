@@ -23,14 +23,10 @@
   }
 } */
 
-@font-face {
-  font-family: "Dosis";
-  src: url("./fonts/Dosis-VariableFont_wght.ttf");
-}
-
 html,
 body {
-  font-family: system-ui, "Rubik", sans-serif;
+  font-family: "Ideal Sans SSm A", "Ideal Sans SSm B", system-ui,
+    "Helvetica Neue", sans-serif;
   color: var(--color-text-dark);
   background-color: var(--color-background);
   display: flex;
@@ -46,6 +42,7 @@ p:last-child {
 }
 
 p {
+  font-family: "Sentinel SSm A", "Sentinel SSm B";
   margin: 0 0 2rem;
 }
 
