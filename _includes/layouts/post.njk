@@ -28,21 +28,21 @@
 </article>
 <nav class="related-posts-nav">
 	<ul class="no-list-style">
-	{% if nextPost %}
 	<li>
+		{% if nextPost %}
 		<label>← Newer</label>
 		<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+	{% endif %}
 	</li>
-	{% endif %}
-		<li class="home">
-			<a href="/">Home</a>
-		</li>
+	<li class="home">
+		<a href="/">Home</a>
+	</li>
+	<li>
 	{% if previousPost %}
-		<li>
-			<label>Older →</label>
-			<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-		</li>
+		<label>Older →</label>
+		<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
 	{% endif %}
+	</li>
 	</ul>
 </nav>
 {% endblock %}
