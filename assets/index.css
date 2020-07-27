@@ -104,7 +104,7 @@ ol {
 
 ul li::before {
 	content: "\2022";
-	color: var(--color-text-light);
+	color: var(--color-primary);
 	display: inline-block;
 	font-size: 1.2rem;
 	line-height: 1rem;
@@ -124,11 +124,10 @@ ol:not(.post-list) li {
 }
 ol:not(.post-list) li::before {
 	content: counter(counter) ".";
-	color: var(--color-text);
+	color: var(--color-primary);
 	font-weight: 900;
-	font-size: 0.75rem;
 	margin-right: 0.4rem;
-	margin-left: -1rem;
+	margin-left: -1.2rem;
 }
 
 .highlight-line {
@@ -273,6 +272,7 @@ blockquote {
 	margin: -1rem 0 2rem 0;
 	background: var(--color-container);
 	border-radius: 1rem;
+	border-left: 4px solid var(--color-primary);
 }
 
 code {
