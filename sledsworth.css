@@ -15,10 +15,10 @@
 	--max-width: 700px;
 
 	--color-primary: black;
-	--color-text-light: rgba(0, 0, 0, 0.4);
-	--color-text: rgba(0, 0, 0, 0.6);
-	--color-text-dark: rgba(0, 0, 0, 0.8);
-	--color-container: rgba(0, 0, 0, 0.05);
+	--color-text-light: rgba(0, 0, 0, 0.45);
+	--color-text: rgba(0, 0, 0, 0.65);
+	--color-text-dark: rgba(0, 0, 0, 0.85);
+	--color-container: rgba(0, 0, 0, 0.1);
 	--color-background: white;
 }
 
@@ -28,7 +28,7 @@
 		--color-text-light: rgba(255, 255, 255, 0.5);
 		--color-text: rgba(255, 255, 255, 0.75);
 		--color-text-dark: rgba(255, 255, 255, 0.95);
-		--color-container: rgba(255, 255, 255, 0.1);
+		--color-container: rgba(255, 255, 255, 0.15);
 		--color-background: black;
 	}
 }
