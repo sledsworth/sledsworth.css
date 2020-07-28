@@ -1,7 +1,7 @@
 ---
 title: Their Businesses Went Virtual. Then Apple Wanted a Cut.
 link: https://www.nytimes.com/2020/07/28/technology/apple-app-store-airbnb-classpass.html
-date: 2020-7-28
+date: 2020-07-28
 tags:
 - apple #apple
 - tech #tech
