@@ -2,7 +2,7 @@
 title: "Xbox Showcase: You Can’t Afford Not to Have Game Pass Ultimate"
 date: 2020-07-24
 tags:
-  - videogames
+  - videogames #videogames
 link: https://www.xbox.com/en-US/xbox-games-showcase
 ---
 
