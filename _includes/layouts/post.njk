@@ -30,7 +30,9 @@
 	<ul class="no-list-style">
 	<li>
 		{% if nextPost %}
-		<label>← Newer</label>
+		<label class="start">
+		<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="margin-right: .5rem;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><rect id="back-arrow" x="0" y="0" width="13.333" height="13.333" style="fill:none;"/><g><path d="M2.005,5.333c-0.736,0 -1.333,0.598 -1.333,1.334c0,0.736 0.597,1.333 1.333,1.333l9.323,0c0.736,0 1.334,-0.597 1.334,-1.333c0,-0.736 -0.598,-1.334 -1.334,-1.334l-9.323,0Z" /><path d="M2.947,5.724c-0.52,-0.521 -1.365,-0.521 -1.885,0c-0.52,0.52 -0.52,1.365 0,1.885l4.714,4.714c0.52,0.521 1.365,0.521 1.886,0c0.52,-0.52 0.52,-1.365 0,-1.885l-4.715,-4.714Z" /><path d="M1.062,5.724c-0.52,0.52 -0.52,1.365 0,1.886c0.52,0.52 1.365,0.52 1.885,0l4.715,-4.714c0.52,-0.521 0.52,-1.366 0,-1.886c-0.521,-0.52 -1.366,-0.52 -1.886,0l-4.714,4.714Z" /></g></svg>
+		Newer</label>
 		<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
 	{% endif %}
 	</li>
@@ -39,8 +41,8 @@
 	</li>
 	<li>
 	{% if previousPost %}
-		<label>Older
-		<svg width="100%" height="100%" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><rect id="forward-arrow" x="0" y="0" width="13.333" height="13.333" style="fill:none;"/><g><path d="M11.328,5.333c0.736,0 1.334,0.598 1.334,1.334c0,0.736 -0.598,1.333 -1.334,1.333l-9.323,0c-0.736,0 -1.333,-0.597 -1.333,-1.333c0,-0.736 0.597,-1.334 1.333,-1.334l9.323,0Z" style="fill:#ebebeb;"/><path d="M10.386,5.724c0.52,-0.521 1.365,-0.521 1.885,0c0.521,0.52 0.521,1.365 0,1.885l-4.714,4.714c-0.52,0.521 -1.365,0.521 -1.885,0c-0.521,-0.52 -0.521,-1.365 0,-1.885l4.714,-4.714Z" style="fill:#ebebeb;"/><path d="M12.271,5.724c0.521,0.52 0.521,1.365 0,1.886c-0.52,0.52 -1.365,0.52 -1.885,0l-4.714,-4.714c-0.521,-0.521 -0.521,-1.366 0,-1.886c0.52,-0.52 1.365,-0.52 1.885,0l4.714,4.714Z" style="fill:#ebebeb;"/></g></svg>
+		<label class="end">Older
+		<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="margin-left:.5rem;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><rect id="forward-arrow" x="0" y="0" width="13.333" height="13.333" style="fill:none;"/><g><path d="M11.328,5.333c0.736,0 1.334,0.598 1.334,1.334c0,0.736 -0.598,1.333 -1.334,1.333l-9.323,0c-0.736,0 -1.333,-0.597 -1.333,-1.333c0,-0.736 0.597,-1.334 1.333,-1.334l9.323,0Z" /><path d="M10.386,5.724c0.52,-0.521 1.365,-0.521 1.885,0c0.521,0.52 0.521,1.365 0,1.885l-4.714,4.714c-0.52,0.521 -1.365,0.521 -1.885,0c-0.521,-0.52 -0.521,-1.365 0,-1.885l4.714,-4.714Z" /><path d="M12.271,5.724c0.521,0.52 0.521,1.365 0,1.886c-0.52,0.52 -1.365,0.52 -1.885,0l-4.714,-4.714c-0.521,-0.521 -0.521,-1.366 0,-1.886c0.52,-0.52 1.365,-0.52 1.885,0l4.714,4.714Z" /></g></svg>
 		</label>
 		<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
 	{% endif %}
