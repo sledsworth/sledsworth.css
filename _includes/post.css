@@ -86,7 +86,6 @@ a.post-header-link:focus:visited,
   text-transform: capitalize;
   font-size: 1rem;
   color: var(--color-text-light);
-  font-variant: all-small-caps;
   font-weight: 800;
 }
 
