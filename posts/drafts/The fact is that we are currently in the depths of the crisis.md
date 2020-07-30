@@ -1,0 +1,1 @@
+The fact is that we are currently in the depths of the crisis and still not 
