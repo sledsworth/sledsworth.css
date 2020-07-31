@@ -3,7 +3,7 @@
     {% if isDifferentDate %}
     <hr class="post-list-divider" />
     {% endif %}
-    <article class="post-list-link-item">
+    <article class="post-list-item">
       {% if isDifferentDate %}
       <time class="post-list-date small-caps" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
       {% endif %}
@@ -15,9 +15,11 @@
             <code>{{ post.url }}</code>
             {% endif %}
         </a>
-        {# <a href="{{ post.url | url }}">Local</a> #}
       </h2>
       <ul class="tag-list no-list-style">
+        <li>
+          <a class="small-caps permalink tag" href="{{ post.url | url }}">Direct Link</a>
+        </li>
       {% for tag in post.data.tags %}
         {%- if collections.tagList.indexOf(tag) != -1 -%}
         <li>
