@@ -5,6 +5,7 @@ permalink: /about/
 eleventyNavigation:
   key: About
   order: 3
+bodyClass: large
 ---
 
 # About Steve

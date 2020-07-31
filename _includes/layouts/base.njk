@@ -18,7 +18,7 @@
     {% block css %}
     {% endblock %}
   </head>
-  <body>
+  <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}">
     {% include "construction.njk" %}
     {% if banner !== false %}
       {% block announcement %}
