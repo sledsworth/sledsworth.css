@@ -30,7 +30,7 @@
 	<ul class="no-list-style">
 	<li>
 		{% if nextPost %}
-		<label class="start">
+		<label class="small-caps start">
 		Newer</label>
 		<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
 	{% endif %}
@@ -40,7 +40,7 @@
 	</li>
 	<li>
 	{% if previousPost %}
-		<label class="end">Older
+		<label class="small-caps end">Older
 		</label>
 		<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
 	{% endif %}
