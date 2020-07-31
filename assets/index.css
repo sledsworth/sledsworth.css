@@ -12,7 +12,7 @@
 
 @media screen and (max-width: 614px) {
   :root {
-    --font-size: 15px;
+    --font-size: 16px;
   }
 }
 
@@ -60,7 +60,7 @@ a {
   color: var(--color-text-dark);
   border-bottom: 0;
   box-shadow: 0px -2px var(--color-primary) inset;
-  font-weight: 500;
+  font-weight: 600;
   transition: box-shadow 0.15s ease-in-out;
 }
 a:hover {
