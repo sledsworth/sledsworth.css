@@ -1,4 +1,5 @@
 .tag-list {
+	font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", system-ui, "Helvetica Neue", sans-serif;
 	display: flex;
 	flex-wrap: wrap;
 	grid-area: tags;
