@@ -3,8 +3,8 @@ title: Twitter Subscription Service Feature Ideas
 link: https://www.theverge.com/2020/7/31/21349644/twitter-subscription-service-survey-undo-sent-analytics-feature-ideas
 date: 2020-07-31
 tags:
-- twitter
-- tech
+- twitter #twitter
+- tech #tech
 ---
 
 [Chaim Gartenberg](https://twitter.com/cgartenberg) on Twitter  subscription features:
