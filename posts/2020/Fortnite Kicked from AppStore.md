@@ -8,6 +8,8 @@ tags:
 - apple
 ---
 
+**Update**: Just as I posted this [Epic filed a lawsuit](https://cdn2.unrealengine.com/apple-complaint-734589783.pdf) regarding Apple's anti-competitive behavior. As I suggested, Epic knew what they were getting into by baiting Apple into removing Fortnite, opening the door to take legal action.
+
 Epic Games blatantly broke the AppStore rules by including their own purchase processing and probably deserve to be removed from the store in this instance.
 
 If I had to guess, I imagine they knew Fortnite would be removed from the store and are adding fuel to the fire started by [Hey](https://hey.com/apple/) and continued by [xCloud](https://www.theverge.com/2020/8/5/21356274/microsoft-xcloud-ios-apple-iphone-ipad-testing-ends-apple-app-store-policies). This happening all around the time [Tim Cook testified that the AppStore isn't a powerful gatekeeper and all developers are treated equal](https://thehill.com/policy/technology/509506-read-apple-ceo-tim-cook-testimony-before-house-panel).
