@@ -1,6 +1,6 @@
 ---
 title: Mozilla cuts 250 jobs, says Firefox development will be affected
-date: 2020-08-13T00:06:01-04:00
+date: 2020-08-13
 tags:
 - tech #tech
 link: https://arstechnica.com/information-technology/2020/08/firefox-maker-mozilla-lays-off-250-workers-says-covid-19-lowered-revenue/
