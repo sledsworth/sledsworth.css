@@ -2,7 +2,7 @@
 title: Netlify Reaches One Million Devs!
 date: 2020-08-03
 tags:
-- tech
+- tech #tech
 link: https://million-devs.netlify.com/?utm_source=csstricks&utm_medium=milliondevs-sd&utm_campaign=devex
 ---
 

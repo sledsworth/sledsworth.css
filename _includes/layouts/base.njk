@@ -29,7 +29,7 @@
       <div class="global-header">
         <section class="gobal-header-title-section">
           <h1 class="global-header-title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-          <div class="global-header-tagline"><h2 class="">{{ metadata.description }}</h2></div>
+          <p class="global-header-tagline" role="doc-subtitle">{{ metadata.description }}</p>
         </section>
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
         <ul class="global-header-nav no-list-style">
@@ -52,7 +52,7 @@
         <a href="https://github.com/sledsworth">Github</a>
         <a href="https://codepen.io/sledsworth">CodePen</a>
       </nav>
-      <span id="copyright" class="text-fine copyright">2020 Steven Ledsworth</span>
+      <span id="copyright" class="text-fine copyright small-caps">2020 Steven Ledsworth</span>
     </footer>
     <script>
       var currentYear = new Date().getFullYear();
