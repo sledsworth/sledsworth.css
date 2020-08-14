@@ -1,11 +1,11 @@
 ---
 title: Fortnite Kicked from AppStore
 link: https://www.theverge.com/2020/8/13/21366438/apple-fortnite-ios-app-store-violations-epic-payments
-date: 2020-08-13T16:15:33
+date: 2020-08-13T16:15:33-4:00
 tags:
-- videogames
-- tech
-- apple
+  - videogames
+  - tech
+  - apple
 ---
 
 **Update**: Just as I posted this [Epic filed a lawsuit](https://cdn2.unrealengine.com/apple-complaint-734589783.pdf) regarding Apple's anti-competitive behavior. As I suggested, Epic knew what they were getting into by baiting Apple into removing Fortnite, opening the door to take legal action.
