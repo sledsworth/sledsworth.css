@@ -1,5 +1,7 @@
 ---
 title: What if I Don't Want to Play?
+tags:
+	- politics #politics
 ---
 
 Growing up you are told that you have to do things that you do not want to do. Regardless of the reasoning your guardians gave you—cliche being to learn responsibilities—I was always aware that the reasoning was unfounded. Mowing the lawn doesn’t make me more responsible, it makes your grass shorter for a much cheaper rate than you would find any professional charging (to be fair, the job was worse as well, I guess my heart wasn’t in it).
