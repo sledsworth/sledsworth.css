@@ -259,7 +259,7 @@ a[href^="http"]:hover::after {
 }
 
 .flex-row.flex-paragraph {
-	margin: -1rem auto;
+	margin: 4rem auto;
 }
 
 .flex-row.flex-paragraph p {
@@ -267,7 +267,8 @@ a[href^="http"]:hover::after {
 	padding: 1rem 2rem;
 }
 
-.flex-row.flex-paragraph p:nth-child(4n + 3) {
+.flex-row.flex-paragraph p:nth-child(4n + 3),
+.flex-row.flex-paragraph p:nth-child(1) {
 	background: var(--color-container);
 	border-radius: 1rem;
 	box-shadow: var(--shadow-l);
