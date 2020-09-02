@@ -19,25 +19,20 @@
     {% endblock %}
   </head>
   <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}">
-    {% include "construction.njk" %}
-    {% if banner !== false %}
-      {% block announcement %}
-        {% include "../announcement.njk" %}
-      {% endblock %}
-    {% endif %}
-    <header class="container">
-      <div class="global-header">
-        <section class="gobal-header-title-section">
-          <h1 class="global-header-title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-          <p class="global-header-tagline" role="doc-subtitle">{{ metadata.description }}</p>
-        </section>
+    <header class="global-header">
+      <div class="global-header--title-container">
+        <a class="global-header--title" href="{{ '/' | url }}">{{ metadata.title }}</a>
+      </div>
+      <nav class="global-header--nav">
+        <ul>
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-        <ul class="global-header-nav no-list-style">
         {%- for entry in collections.all | eleventyNavigation %}
           <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
         {%- endfor %}
         </ul>
-      </div>
+      </nav>
+      <img class="global-header--avatar" src="/assets/img/avatar.png" />
+      <aside class="global-header--description" role="doc-subtitle">{{ metadata.description }}</aside>
     </header>
     <main class="{% if templateClass %}{{ templateClass }}{% else %}container{% endif %}">
       {% block content %}

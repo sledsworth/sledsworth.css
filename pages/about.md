@@ -28,6 +28,8 @@ He has a lot of bad ideas—and is still paying for all of their domains. Tangen
 
 He has spent countless hours attempting to make his home _smart_, only to find himself yelling “ALEXA TURN OFF THE BEDROOM LIGHT!” many, many times every night.
 
+He is confused about cancellation—at one point, he thought he had it: we exclaim althogether "this person did a bad thing and therefore is totally a bad person and that can never change, end of story!" on Twitter. Then Hamilton was cancelled, putting Lin-Manuel Miranda in the same camp as R. Kelly.
+
 One time, he shit in a public restroom with the stall door wide open. This, of course, was unintentional—the grave error was only realized once he looked up, locking eyes—through the mirror—with a gentleman washing his hands. He is quite certain that man did not sing happy birthday to himself twice over before rinsing the soap off.
 
 Currently, his favorite ECMAScript addition is the [spread operator][2]: `{ ...props }`.

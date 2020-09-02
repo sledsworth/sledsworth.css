@@ -1,46 +1,80 @@
-.global-header {
-  font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", system-ui,
-    "Helvetica Neue", sans-serif;
-  display: flex;
-  max-width: var(--max-width);
-  margin: auto;
+/* .global-header {
+	font-family: "SF Pro Rounded", system-ui, sans-serif;
+	display: flex;
+	max-width: var(--max-width);
+	margin: auto;
 }
 
 .gobal-header-title-section {
-  flex: 2 1;
+	flex: 2 1;
 }
 
 .global-header-title {
-  margin: 0.15rem 0 0;
+	margin: 0.15rem 0 0;
 }
 
 .global-header-tagline {
-  max-width: 400px;
-  margin: 1rem 0 0;
-  font-size: var(--font-size-s);
-  color: var(--color-text-light);
-  font-weight: 400;
+	max-width: 400px;
+	margin: 1rem 0 0;
+	font-size: var(--font-size-s);
+	color: var(--color-text-light);
+	font-weight: 400;
 }
 
 .global-header-nav {
-  flex: 2 2;
-  max-width: 260px;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  margin: 0.5rem 0 0 0;
+	flex: 2 2;
+	max-width: 260px;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	margin: 0.5rem 0 0 0;
 }
 
 .nav {
-  padding: 0;
-  list-style: none;
-  margin-left: 1em;
+	padding: 0;
+	list-style: none;
+	margin-left: 1em;
 }
 
 .nav-item a:not(:hover) {
-  text-decoration: none;
+	text-decoration: none;
 }
 .nav-item-active a {
-  font-weight: 800;
-  box-shadow: 0px -6px var(--color-primary) inset;
+	font-weight: 800;
+	box-shadow: 0px -6px var(--color-primary) inset;
+} */
+
+.global-header {
+	display: grid;
+	grid-template-areas: "title nav avatar" "title description description";
+}
+
+.global-header .global-header--title-container {
+	grid-area: title;
+}
+
+.global-header .global-header--title {
+	display: inline-block;
+	transform-origin: right bottom;
+	transform: rotate(-90deg);
+}
+
+.global-header .global-header--nav {
+	grid-area: nav;
+}
+
+.global-header .global-header--nav ul {
+	list-style: none;
+}
+
+.global-header .global-header--nav ul li::before {
+	content: none;
+}
+
+.global-header .global-header--description {
+	grid-area: description;
+}
+
+.global-header .global-header--avatar {
+	grid-area: avatar;
 }
