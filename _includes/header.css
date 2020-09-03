@@ -47,16 +47,24 @@
 .global-header {
 	display: grid;
 	grid-template-areas: "title nav avatar" "title description description";
+	grid-template-columns: 1fr 2fr 2fr;
+	gap: 1rem;
+	margin: 2rem;
 }
 
 .global-header .global-header--title-container {
 	grid-area: title;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 
 .global-header .global-header--title {
-	display: inline-block;
-	transform-origin: right bottom;
-	transform: rotate(-90deg);
+	transform-origin: center;
+	transform: rotate(180deg);
+	writing-mode: vertical-rl;
+	box-shadow: none;
+	font-size: 2.5rem;
 }
 
 .global-header .global-header--nav {
@@ -65,6 +73,11 @@
 
 .global-header .global-header--nav ul {
 	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 0;
+	height: 100%;
 }
 
 .global-header .global-header--nav ul li::before {
@@ -77,4 +90,5 @@
 
 .global-header .global-header--avatar {
 	grid-area: avatar;
+	border-radius: 100%;
 }
