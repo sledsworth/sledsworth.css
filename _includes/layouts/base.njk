@@ -32,7 +32,10 @@
         </ul>
       </nav>
       <img class="global-header--avatar" src="/assets/img/avatar.png" />
-      <aside class="global-header--description" role="doc-subtitle">{{ metadata.description }}</aside>
+      <aside class="global-header--description" role="doc-subtitle">
+        <p>{{ metadata.description }}</p>
+        <p>Mostly about tech, videogames, and software development—but like everything else, politics might get in the way.</p>
+      </aside>
     </header>
     <main class="{% if templateClass %}{{ templateClass }}{% else %}container{% endif %}">
       {% block content %}
