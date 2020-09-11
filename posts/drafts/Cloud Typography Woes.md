@@ -10,3 +10,4 @@ tags:
 - Cannot work locally
 - 
 https://www.filamentgroup.com/lab/load-css-simpler/
+bear://x-callback-url/open-note?id=B3E54E7E-67AD-476C-8F57-F85DF7BCC36A-13872-0006717DFD9C8101
