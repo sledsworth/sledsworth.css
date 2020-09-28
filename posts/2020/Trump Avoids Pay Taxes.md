@@ -7,7 +7,7 @@ tags:
 - politics #politics
 ---
 
-Sure looks like Trump's biggest success was playing a [billionaire businessman on TV](https://en.wikipedia.org/wiki/The_Apprentice_(American_TV_series) and hasn't been able to do anything but lose money on his own ventures since. If I was a lying cheat that needed publicity to boost my gaudy brand, maybe I would run for president too. This makes it more clear to me that the dumbass didn't intend on being able to dupe near half the population—yet here we are—but instead wanted to get more TV time to help his failing businesses.
+Sure looks like Trump's biggest success was playing a [billionaire businessman on TV](https://en.wikipedia.org/wiki/The_Apprentice_(American_TV_series)) and hasn't been able to do anything but lose money on his own ventures since. If I was a lying cheat that needed publicity to boost my gaudy brand, maybe I would run for president too. This makes it more clear to me that the dumbass didn't intend on being able to dupe near half the population—yet here we are—but instead wanted to get more TV time to help his failing businesses.
 
 I'd like to say: *We finally got him!*
 
