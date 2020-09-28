@@ -3,9 +3,9 @@ title: Microsoft Cuts xCloud iOS Testing Early as its Future on Apple Devices Re
 link: https://www.theverge.com/2020/8/5/21356274/microsoft-xcloud-ios-apple-iphone-ipad-testing-ends-apple-app-store-policies
 date: 2020-08-06
 tags:
-- apple
-- microsoft
-- tech
+- apple #apple
+- microsoft #microsoft
+- tech #tech
 ---
 
 

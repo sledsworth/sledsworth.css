@@ -3,8 +3,8 @@ title: Nova, Panic's New Text Editor
 link: https://nova.app
 date: 2020-09-20T11:11:15-04:00
 tags:
-- apple
-- tech
+- apple #apple
+- tech #tech
 ---
 
 I've had a chance to test Nova for the last few months—it's real good! 
