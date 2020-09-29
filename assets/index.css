@@ -46,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "SF Pro Rounded", system-ui, sans-serif;
+  font-family: ui-rounded, "SF Pro Rounded", system-ui, sans-serif;
 }
 
 p:last-child {
@@ -209,7 +209,7 @@ footer {
 }
 
 footer nav {
-  font-family: "SF Pro Rounded", system-ui, sans-serif;
+  font-family: ui-rounded, "SF Pro Rounded", system-ui, sans-serif;
   margin: 0 1rem;
   background: var(--color-container);
   padding: 1rem 2rem;
@@ -235,7 +235,7 @@ hr {
 
 a[href^="http"]::after {
   content: "↗";
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: ui-rounded, system-ui, -apple-system, sans-serif;
   font-weight: 900;
   color: var(--color-text-light);
   transition: all 0.15s ease-in-out;
@@ -302,7 +302,7 @@ blockquote *:last-child {
 
 code {
   background: var(--color-container);
-  font-family: monospace;
+  font-family: ui-monospace, monospace;
   padding: 0.15rem 0.25rem;
   border-radius: 4px;
 }
@@ -331,5 +331,5 @@ img:not([src$=".svg"]) {
 }
 
 .small-caps {
-  font-family: "SF Pro Rounded", system-ui, sans-serif;
+  font-family: ui-rounded, "SF Pro Rounded", system-ui, sans-serif;
 }
