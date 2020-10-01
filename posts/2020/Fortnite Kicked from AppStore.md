@@ -1,7 +1,7 @@
 ---
 title: Fortnite Kicked from AppStore
 link: https://www.theverge.com/2020/8/13/21366438/apple-fortnite-ios-app-store-violations-epic-payments
-date: 2020-08-13T16:15:33-4:00
+date: 2020-08-13T16:15:33
 tags:
   - videogames
   - tech

@@ -1,6 +1,6 @@
 ---
 title: Kamala Harris Is Biden’s Choice for Vice President
-date: 2020-08-12T16:41:27-4:00
+date: 2020-08-12T16:41:27
 tags:
   - politics #politics
 link: https://www.nytimes.com/2020/08/11/us/politics/kamala-harris-vp-biden.html?referringSource=articleShare
