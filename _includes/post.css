@@ -29,7 +29,6 @@
 }
 
 .post-header-link {
-  font-family: sans-serif;
   text-decoration: none;
   font-style: normal;
   margin-left: 0.1em;
@@ -96,14 +95,12 @@ a.post-header-link:focus:visited,
 
 .related-posts-nav ul li:first-child label::before {
   content: "←";
-  font-family: system-ui;
   font-weight: 900;
   margin-right: 0.25rem;
 }
 
 .related-posts-nav ul li:last-child label::after {
   content: "→";
-  font-family: system-ui;
   font-weight: 900;
   margin-left: 0.25rem;
 }

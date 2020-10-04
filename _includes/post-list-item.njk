@@ -1,12 +1,9 @@
   {# isDifferentDate and prevDate are set in parent #}
   <li>
     {% if isDifferentDate %}
-    <hr class="post-list-divider" />
+      {% include "date-time-separator.njk" %}
     {% endif %}
     <article class="post-list-item">
-      {% if isDifferentDate %}
-      <time class="post-list-date small-caps" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-      {% endif %}
       <h2 class="post-list-item-heading">
         <a href="{{ post.url | url }}">
             {% if post.data.title %}

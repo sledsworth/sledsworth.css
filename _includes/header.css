@@ -45,52 +45,55 @@
 } */
 
 .global-header {
-	display: grid;
-	grid-template-areas: "title nav avatar" "title description description";
-	grid-template-columns: 1fr 2fr 2fr;
-	gap: 1rem;
-	margin: 2rem;
+  display: grid;
+  grid-template-areas: "title nav avatar" "title description description";
+  grid-template-columns: 1fr 10fr 2fr;
+  gap: 1rem;
+  margin: 2rem;
 }
 
 .global-header .global-header--title-container {
-	grid-area: title;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  grid-area: title;
+  display: flex;
+  align-items: flex-end;
 }
 
 .global-header .global-header--title {
-	transform-origin: center;
-	transform: rotate(180deg);
-	writing-mode: vertical-rl;
-	box-shadow: none;
-	font-size: 3rem;
+  transform-origin: center;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  box-shadow: none;
+  font-size: 3rem;
+  font-weight: 800;
+  min-width: 4rem;
 }
 
 .global-header .global-header--nav {
-	grid-area: nav;
+  grid-area: nav;
+  margin-left: max(3vw, 1rem);
 }
 
 .global-header .global-header--nav ul {
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0;
-	height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
 }
 
 .global-header .global-header--nav ul li::before {
-	content: none;
+  content: none;
 }
 
 .global-header .global-header--description {
-	grid-area: description;
+  grid-area: description;
   max-width: 460px;
+  margin-left: max(3vw, 1rem);
 }
 
 .global-header .global-header--avatar {
-	grid-area: avatar;
-	border-radius: 100%;
+  grid-area: avatar;
+  border-radius: 100%;
   max-width: 200px;
 }

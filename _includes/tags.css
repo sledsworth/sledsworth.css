@@ -1,29 +1,29 @@
 .tag-list {
-	font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", system-ui, "Helvetica Neue", sans-serif;
-	display: flex;
-	flex-wrap: wrap;
-	grid-area: tags;
-	margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: tags;
+  margin: 0;
 }
 
 a.tag {
-	display: inline-block;
-	padding: 0.25rem 1rem;
-	margin: 0.25rem 0.5rem 0.25rem 0;
-	background-color: var(--color-primary-light);
-	color: var(--color-primary);
-	border-radius: .75rem;
-	text-decoration: none;
-	box-shadow: none;
-	transition: box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: 0.75rem;
+  text-decoration: none;
+  box-shadow: none;
+  transition: box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 
 a.tag:hover {
-	transform: scale(1.05);
-	box-shadow: 0 2.8px 2.2px rgba(156, 162, 186, 0.03), 0 6.7px 5.3px rgba(156, 162, 186, 0.05),
-		0 12.5px 10px rgba(156, 162, 186, 0.08);
+  transform: scale(1.05);
+  box-shadow: 0 2.8px 2.2px rgba(156, 162, 186, 0.03),
+    0 6.7px 5.3px rgba(156, 162, 186, 0.05),
+    0 12.5px 10px rgba(156, 162, 186, 0.08);
 }
 
 .tag-heading {
-	text-transform: capitalize;
+  text-transform: capitalize;
 }
