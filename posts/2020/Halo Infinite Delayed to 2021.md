@@ -1,7 +1,7 @@
 ---
 title: Halo Infinite Delayed to 2021
 link: https://www.halowaypoint.com/en-us/news/halo-infinite-development-update
-date: 2020-08-13T14:01:39-4:00
+date: 2020-08-13T14:01:39
 tags:
   - halo #halo
   - videogames #videogames
