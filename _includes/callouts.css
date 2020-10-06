@@ -1,8 +1,6 @@
 .callout-container {
-  width: 80%;
-  text-align: center;
+  width: 100%;
   overflow: hidden;
-  padding: 2rem;
 }
 
 .callouts {
@@ -33,12 +31,23 @@
 }
 .callouts > article {
   scroll-snap-align: center;
-  width: 100%;
+  /* width: 100%; */
   border-radius: 32px;
-  background: #eee;
+  background: var(--color-primary);
   transform-origin: center center;
   transform: scale(1);
   transition: transform 0.1s;
+  margin: 2rem;
+  min-width: 60vw;
+  padding: 2rem;
+}
+
+.callouts article:first-child {
+  margin-left: 10rem;
+}
+
+.callouts article:last-child {
+  margin-right: 10rem;
 }
 
 .callouts > article.callout--active {
