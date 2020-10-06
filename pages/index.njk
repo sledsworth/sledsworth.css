@@ -7,6 +7,8 @@ permalink: /
 bodyClass: large
 ---
 
+{% include "callouts.njk" %}
+
 <h1>Latest Posts</h1>
 
 {% set postslist = collections.posts | head(-5) %}

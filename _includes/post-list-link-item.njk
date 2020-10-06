@@ -1,4 +1,5 @@
   {# isDifferentDate and prevDate are set in parent #}
+  {% set date = post.date %}
   <li>
     {% if isDifferentDate %}
       {% include "date-time-separator.njk" %}
