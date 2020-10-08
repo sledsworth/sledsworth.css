@@ -3,21 +3,33 @@
   <a href="#callout-vote">Vote</a>
   <a href="#callout-blm">BLM</a>
 
-  <div class="callouts">
-    <article id="callout-vote">
-      <h2>Vote.</h2>
-      <p>It’s important that your voice is heard.</p>
-      <p>Unfortunantely, there are some making the process intentionally more difficult. They are banking on you not showing up.</p>
-      <p>Don’t be silenced.</p>
-      <p>Get information on your local elections</p>
-    </article>
-    <article id="callout-blm">
-      <h2>Black Live Matter.</h2>
-      <p>Inequality is gross.</p>
-      <p>The black community has suffered enough. I urge everyone to donate to the cause, as well as educate yourself and others on the matter.</p>
-      <p>Lost? <a href="/features/blm">Take a look at my suggested readings and charties.</a></p>
-    </article>
-  </div>
+  <ul class="callouts">
+    <li>
+      <article id="callout-vote">
+        <h2>Vote.</h2>
+        <p>It’s important that your voice is heard.</p>
+        <p>Unfortunantely, there are some making the process intentionally more difficult. They are banking on you not showing up.</p>
+        <p>Don’t be silenced.</p>
+        <p>Get information on your local elections</p>
+      </article>
+    </li>
+    <li>
+      <article id="callout-blm">
+        <h2>Black Live Matter.</h2>
+        <p>Inequality is gross.</p>
+        <p>The black community has suffered enough. I urge everyone to donate to the cause, as well as educate yourself and others on the matter.</p>
+        <p>Lost? <a href="/features/blm">Take a look at my suggested readings and charties.</a></p>
+      </article>
+    </li>
+    <li>
+      <article id="callout-blm">
+        <h2>Black Live Matter.</h2>
+        <p>Inequality is gross.</p>
+        <p>The black community has suffered enough. I urge everyone to donate to the cause, as well as educate yourself and others on the matter.</p>
+        <p>Lost? <a href="/features/blm">Take a look at my suggested readings and charties.</a></p>
+      </article>
+    </li>
+  </ul>
 </aside>
 <script>
 function calloutSetup() {
@@ -35,10 +47,10 @@ function calloutSetup() {
   }, {
     root: document.querySelector('#callout-container'),
     rootMargin: '0px',
-    threshold: .8
+    threshold: .51
   });
 
-  var callouts = document.querySelectorAll('.callouts > article');
+  var callouts = document.querySelectorAll('.callouts > li');
   callouts.forEach(function(callout) {
     observer.observe(callout);
   });

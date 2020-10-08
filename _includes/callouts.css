@@ -29,29 +29,46 @@
 .callouts::-webkit-scrollbar-track {
   background: transparent;
 }
-.callouts > article {
-  scroll-snap-align: center;
-  /* width: 100%; */
-  border-radius: 32px;
-  background: var(--color-primary);
+.callouts li {
+  scroll-snap-align: start;
   transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.1s;
-  margin: 2rem;
-  min-width: 60vw;
+  min-width: 100vw;
+  position: relative;
+  margin: 0 -24vw 0 0;
+}
+
+.callouts article {
+  border-radius: 48px;
+  background: var(--color-primary);
   padding: 2rem;
+  width: 90vw;
+  margin: 0 5vw;
+  transform: scale(.8);
+  transition: transform 0.2s, opacity 0.15s;
+  opacity: .8;
 }
 
-.callouts article:first-child {
-  margin-left: 10rem;
+.callouts li:first-child {
+  /* margin-left: 10rem; */
 }
 
-.callouts article:last-child {
-  margin-right: 10rem;
+.callouts li:last-child {
+  /* margin-right: 10rem; */
+  scroll-snap-align: end;
 }
 
-.callouts > article.callout--active {
-  transform: scale(1.1);
+.callouts .callout--active article {
+  transform: scale(1.0);
+  opacity: 1;
+}
+
+.callouts li {
+  z-index: 5;
+  transition: z-index 0.15s;
+}
+
+.callouts li.callout--active {
+  z-index: 10;
 }
 
 .callout-container > a {
