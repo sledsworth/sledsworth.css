@@ -122,6 +122,7 @@
   border: none;
   height: 1rem;
   width: 1rem;
+  padding: 0;
   margin: .5rem;
   border-radius: 100%;
   transition: all .2s ease;
@@ -133,7 +134,7 @@
   box-shadow: var(--shadow-l);
 }
 
-.callout-button--active,
+.callout-button.callout-button--active,
 .callout-button:active {
   background: var(--color-primary);
 }
