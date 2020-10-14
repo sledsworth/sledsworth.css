@@ -2,13 +2,14 @@
 
   <a href="#callout-vote">Vote</a>
   <a href="#callout-blm">BLM</a>
-
+  <div>
+  <button id="callout--back-button">Back</button>
   <ul class="callouts">
     <li>
       <article id="callout-vote">
         <h2>Vote.</h2>
         <p>It’s important that your voice is heard.</p>
-        <p>Unfortunantely, there are some making the process intentionally more difficult. They are banking on you not showing up.</p>
+        <p>Unfortunately, there are some making the process intentionally more difficult. They are banking on you not showing up.</p>
         <p>Don’t be silenced.</p>
         <p>Get information on your local elections</p>
       </article>
@@ -22,7 +23,7 @@
       </article>
     </li>
     <li>
-      <article id="callout-blm">
+      <article id="callout-blm-2">
         <h2>Black Live Matter.</h2>
         <p>Inequality is gross.</p>
         <p>The black community has suffered enough. I urge everyone to donate to the cause, as well as educate yourself and others on the matter.</p>
@@ -30,12 +31,37 @@
       </article>
     </li>
   </ul>
+  <button id="callout--forward-button">Forward</button>
+  </div>
 </aside>
 <script>
+
 function calloutSetup() {
+  var callouts = document.querySelectorAll('.callouts > li');
+  var currentCallout = 0;
+  var backButton = document.querySelector('#callout--back-button');
+  var forwardButton = document.querySelector('#callout--forward-button');
+  console.log(backButton, forwardButton);
+  backButton.onclick = function() {
+    currentCallout = currentCallout - 1 < 0 ? callouts.length - 1 : currentCallout - 1;
+    console.log(currentCallout);
+    var callout = callouts[currentCallout];
+    callout.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  };
+  forwardButton.onclick = function() {
+    currentCallout = (++currentCallout) % callouts.length;
+    console.log(currentCallout);
+    var callout = callouts[currentCallout];
+    callout.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  };
+
   if (!IntersectionObserver) {
+    for (var i = 0; i < callouts.length; i++) {
+      callouts[i].classList.add('callout--active');
+    }
     return;
   }
+
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
@@ -50,7 +76,6 @@ function calloutSetup() {
     threshold: .51
   });
 
-  var callouts = document.querySelectorAll('.callouts > li');
   callouts.forEach(function(callout) {
     observer.observe(callout);
   });
