@@ -21,16 +21,16 @@
   */
 }
 .callouts::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 0;
+  height: 0;
 }
-.callouts::-webkit-scrollbar-thumb {
+/* .callouts::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 10px;
 }
 .callouts::-webkit-scrollbar-track {
   background: transparent;
-}
+} */
 .callouts li {
   scroll-snap-align: start;
   transform-origin: center center;
@@ -108,6 +108,32 @@
     opacity: .2;
     right: 0;
     top: 0;
+}
+
+
+.callout-navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.callout-button {
+  background: var(--color-subtle);
+  border: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: .5rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.callout-button:hover {
+  background: var(--color-primary-light);
+  box-shadow: var(--shadow-l);
+}
+
+.callout-button--active {
+  background: var(--color-primary);
 }
 
 /* Don't need button navigation */

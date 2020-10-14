@@ -3,7 +3,6 @@
   <a href="#callout-vote">Vote</a>
   <a href="#callout-blm">BLM</a>
   <div class="callout-container">
-  <button id="callout--back-button" class="callout-list-button-back">Back</button>
   <ul class="callouts">
     <li>
       <article id="callout-vote">
@@ -31,27 +30,36 @@
       </article>
     </li>
   </ul>
-  <button id="callout--forward-button" class="callout-list-button-forward">Forward</button>
+  </div>
+  <div class="callout-navigation-buttons">
   </div>
 </aside>
 <script>
 
+function buttonSetup(callout) {
+  return function() {
+    callout.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  }
+}
+
 function calloutSetup() {
+  var buttonContainer = document.querySelector('#callout-container .callout-navigation-buttons');
   var callouts = document.querySelectorAll('.callouts > li');
-  var currentCallout = 0;
-  var backButton = document.querySelector('#callout--back-button');
-  var forwardButton = document.querySelector('#callout--forward-button');
-  console.log(backButton, forwardButton);
-  backButton.onclick = function() {
-    currentCallout = currentCallout - 1 < 0 ? callouts.length - 1 : currentCallout - 1;
-    var callout = callouts[currentCallout];
-    callout.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
-  };
-  forwardButton.onclick = function() {
-    currentCallout = (++currentCallout) % callouts.length;
-    var callout = callouts[currentCallout];
-    callout.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
-  };
+  var calloutButtons = [];
+
+  for (var i = 0; i < callouts.length; i++) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.classList.add('callout-button');
+    button.onclick = buttonSetup(callouts[i]);
+    buttonContainer.appendChild(button);
+    calloutButtons.push(button);
+  }
+  // forwardButton.onclick = function() {
+  //   currentCallout = (++currentCallout) % callouts.length;
+  //   var callout = callouts[currentCallout];
+  //   callout.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  // };
 
   if (!IntersectionObserver) {
     for (var i = 0; i < callouts.length; i++) {
@@ -64,8 +72,8 @@ function calloutSetup() {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
         var index = Array.prototype.indexOf.call(callouts, entry.target);
-        console.log(index);
-        currentCallout = index;
+        calloutButtons.forEach(button => { button.classList.remove('callout-button--active'); });
+        calloutButtons[index].classList.add('callout-button--active');
         entry.target.classList.add('callout--active');
       } else {
         entry.target.classList.remove('callout--active');
