@@ -45,7 +45,7 @@
   padding: 2rem;
   width: 90vw;
   margin: 0 5vw;
-  transform: scale(.8);
+  transform: scale(.85);
   transition: transform 0.2s, opacity 0.15s;
   opacity: .8;
   height: 100%;
