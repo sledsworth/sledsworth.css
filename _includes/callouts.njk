@@ -1,9 +1,9 @@
-<aside id="callout-container" class="callout-container">
+<aside id="callout-container">
 
   <a href="#callout-vote">Vote</a>
   <a href="#callout-blm">BLM</a>
-  <div>
-  <button id="callout--back-button">Back</button>
+  <div class="callout-container">
+  <button id="callout--back-button" class="callout-list-button-back">Back</button>
   <ul class="callouts">
     <li>
       <article id="callout-vote">
@@ -31,7 +31,7 @@
       </article>
     </li>
   </ul>
-  <button id="callout--forward-button">Forward</button>
+  <button id="callout--forward-button" class="callout-list-button-forward">Forward</button>
   </div>
 </aside>
 <script>
@@ -44,13 +44,11 @@ function calloutSetup() {
   console.log(backButton, forwardButton);
   backButton.onclick = function() {
     currentCallout = currentCallout - 1 < 0 ? callouts.length - 1 : currentCallout - 1;
-    console.log(currentCallout);
     var callout = callouts[currentCallout];
     callout.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
   };
   forwardButton.onclick = function() {
     currentCallout = (++currentCallout) % callouts.length;
-    console.log(currentCallout);
     var callout = callouts[currentCallout];
     callout.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
   };

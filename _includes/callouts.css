@@ -1,6 +1,7 @@
 .callout-container {
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .callouts {
@@ -13,6 +14,7 @@
 
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  margin: 0;
   /*
   scroll-snap-points-x: repeat(300px);
   scroll-snap-type: mandatory;
@@ -46,6 +48,7 @@
   transform: scale(.8);
   transition: transform 0.2s, opacity 0.15s;
   opacity: .8;
+  height: 100%;
 }
 
 .callouts li:first-child {
@@ -88,6 +91,23 @@
 }
 .callout-container > a:focus {
   background: #000;
+}
+
+.callout-list-button-back {
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  opacity: .2;
+}
+
+.callout-list-button-forward {
+  height: 100%;
+    position: absolute;
+    z-index: 100;
+    opacity: .2;
+    right: 0;
+    top: 0;
 }
 
 /* Don't need button navigation */
