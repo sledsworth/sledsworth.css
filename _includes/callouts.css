@@ -1,6 +1,6 @@
 .callout-container {
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 
@@ -15,6 +15,7 @@
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   margin: 0;
+  padding: 4rem 0;
   /*
   scroll-snap-points-x: repeat(300px);
   scroll-snap-type: mandatory;
@@ -49,6 +50,14 @@
   transition: transform 0.2s, opacity 0.15s;
   opacity: .8;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  box-shadow: var(--shadow-l);
+}
+
+.callouts article#callout-vote {
+  background: linear-gradient(-45deg, rgb(200, 0, 0, 0.6), rgb(0, 0, 200, 0.6))
 }
 
 .callouts li:first-child {
@@ -114,7 +123,6 @@
 .callout-navigation-buttons {
   display: flex;
   justify-content: center;
-  margin: 1rem;
 }
 
 .callout-button {

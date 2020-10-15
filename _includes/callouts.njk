@@ -1,7 +1,4 @@
 <aside id="callout-container">
-
-  <a href="#callout-vote">Vote</a>
-  <a href="#callout-blm">BLM</a>
   <div class="callout-container">
   <ul class="callouts">
     <li>
@@ -55,11 +52,6 @@ function calloutSetup() {
     buttonContainer.appendChild(button);
     calloutButtons.push(button);
   }
-  // forwardButton.onclick = function() {
-  //   currentCallout = (++currentCallout) % callouts.length;
-  //   var callout = callouts[currentCallout];
-  //   callout.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
-  // };
 
   if (!IntersectionObserver) {
     for (var i = 0; i < callouts.length; i++) {
