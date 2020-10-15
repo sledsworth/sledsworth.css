@@ -35,7 +35,7 @@
 .callouts li {
   scroll-snap-align: start;
   transform-origin: center center;
-  min-width: 100vw;
+  min-width: 100%;
   position: relative;
   margin: 0 -24vw 0 0;
 }
@@ -44,20 +44,24 @@
   border-radius: 48px;
   background: var(--color-primary);
   padding: 2rem;
-  width: 90vw;
-  margin: 0 5vw;
+  margin: 0 4vw;
   transform: scale(.85);
   transition: transform 0.2s, opacity 0.15s;
   opacity: .8;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(1rem);
   -webkit-backdrop-filter: blur(1rem);
   box-shadow: var(--shadow-l);
+  color: white;
+}
+
+.callouts article a {
+  color: white;
 }
 
 .callouts article#callout-vote {
-  background: linear-gradient(-45deg, rgb(200, 0, 0, 0.6), rgb(0, 0, 200, 0.6))
+  background: linear-gradient(-45deg, rgb(200, 0, 0, 0.85), rgb(0, 0, 200, 0.85))
 }
 
 .callouts li:first-child {
