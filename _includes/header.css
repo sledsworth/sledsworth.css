@@ -113,4 +113,14 @@
     font-size: 2.5rem;
   }
 }
+@media screen and (min-width: 720px) {
+  .global-header .global-header--nav ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .global-header .global-header--nav ul li {
+    margin: 0 2rem 0 0;
+  }
+}
 
