@@ -49,7 +49,7 @@
   grid-template-areas: "title nav avatar" "title description description";
   grid-template-columns: 2fr 10fr 2fr;
   gap: 2rem;
-  margin: 4vh 4vw;
+  padding: 10vh 4vw;
   max-width: 1024px;
 }
 
@@ -99,12 +99,10 @@
   border-radius: 100%;
   max-width: 200px;
   width: 25vw;
+  max-height: 200px;
+  height: 25vw;
 }
-@media screen and (max-width: 360px) {
-    .global-header {
-      margin: 4vh 4vw 4vh 0;
-    }
-}
+
 @media screen and (max-width: 420px) {
   .global-header {
     gap: 1rem;

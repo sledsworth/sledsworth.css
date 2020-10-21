@@ -4,6 +4,7 @@
   --color-secondary: #f85572;
   --color-secondary-light: #ffc9d3;
   --color-subtle: #9ca2ba;
+  --color-subtle-light: #e5e7f0;
   --color-background: white;
 
   --max-width-s: 500px;
@@ -59,7 +60,7 @@ p:last-child {
 }
 
 p {
-  margin: 0 0 2rem;
+  margin: 0 0 min(1.5rem, 1.5vh);
 }
 
 p + ul,
@@ -94,6 +95,12 @@ main.home {
   flex-direction: column;
   align-items: flex-start;
   margin: auto;
+}
+
+.home-container {
+  width: 100%;
+  max-width: 720px;
+  padding: 0 4vw 10vh;
 }
 
 table {
@@ -240,7 +247,7 @@ hr {
 a[href^="http"]::after {
   content: "↗";
   font-weight: 900;
-  color: var(--color-text-light);
+  color: var(--color-subtle);
   transition: all 0.15s ease-in-out;
   padding-left: 0.15rem;
 }

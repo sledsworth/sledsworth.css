@@ -15,9 +15,6 @@
         </a>
       </h2>
       <ul class="tag-list no-list-style">
-        <li>
-          <a class="small-caps permalink tag" href="{{ post.url | url }}">Direct Link</a>
-        </li>
       {% for tag in post.data.tags %}
         {%- if collections.tagList.indexOf(tag) != -1 -%}
         <li>
@@ -26,6 +23,9 @@
         </li>
         {%- endif -%}
       {% endfor %}
+      <li>
+        <a class="small-caps permalink tag" href="{{ post.url | url }}">Permalink</a>
+      </li>
       </ul>
       <div class="post-list-item-excerpt post-content">{{ post.data.description }}{{ post.templateContent | safe }}</div>
     </article>
