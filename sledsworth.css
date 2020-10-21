@@ -145,23 +145,29 @@ body {
   color: var(--color-text);
 }
 
+@media screen and (max-width: 420px) {
+  :root {
+    --font-size: 16px;
+  }
+}
+
 h1 {
   font-size: var(--font-size-xl);
-  margin: 3rem 0 2rem;
+  margin: 0 0 4vh;
   font-weight: 700;
   line-height: var(--line-height-xl);
 }
 
 h2 {
   font-size: var(--font-size-l);
-  margin: 2.5rem 0 1.5rem;
+  margin: 0 0 3vh;
   font-weight: 500;
   line-height: var(--line-height-l);
 }
 
 h3 {
   font-size: var(--font-size-l);
-  margin: 2rem 0 1.5rem;
+  margin: 0 0 2.5vh;
   font-weight: 600;
   font-variant: all-small-caps;
   line-height: var(--line-height-l);
@@ -170,21 +176,21 @@ h3 {
 
 h4 {
   font-size: var(--font-size-h4);
-  margin: 1.5rem 0 1.25rem;
+  margin: 0 0 2vh;
   font-weight: 500;
   line-height: var(--line-height-h4);
 }
 
 h5 {
   font-size: 1rem;
-  margin: 1.5rem 0 1rem;
+  margin: 0 0 2vh;
   font-weight: 800;
   color: var(--color-text-dark);
 }
 
 h6 {
   font-size: 1rem;
-  margin: 1.5rem 0 1rem;
+  margin: 0 0 2vh;
   font-weight: 800;
   font-variant: small-caps;
   color: var(--color-text);
