@@ -49,24 +49,18 @@
   grid-template-areas: "title nav avatar" "title description description";
   grid-template-columns: 2fr 10fr 2fr;
   gap: 2rem;
-  padding: 10vh 4vw;
+  padding: 10vh 4vw 10vh 0;
   max-width: 1024px;
 }
 
-.global-header .global-header--title-container {
-  grid-area: title;
-  display: flex;
-  align-items: center;
-}
-
 .global-header .global-header--title {
+  grid-area: title;
   transform-origin: center;
   transform: rotate(180deg);
   writing-mode: vertical-rl;
   box-shadow: none;
   font-size: 3.5rem;
   font-weight: 800;
-  min-width: 4rem;
 }
 
 .global-header .global-header--nav {

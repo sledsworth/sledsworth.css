@@ -1,6 +1,7 @@
 .post-list {
   list-style: none;
   padding: 0;
+  grid-column: 2 / 3;
 }
 
 .post-list-item {
@@ -14,6 +15,17 @@
   background: var(--color-subtle-light);
   height: 4px;
   border-radius: 4px;
+}
+
+.post-list--find-more {
+  grid-column: 2 / 3;
+}
+
+@media screen and (max-width: 420px) {
+  .post-list,
+  .post-list--find-more {
+    grid-column: 2 / 4;
+  }
 }
 
 /* @media screen and (max-width: 700px) {

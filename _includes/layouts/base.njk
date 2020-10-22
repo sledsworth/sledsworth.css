@@ -19,9 +19,7 @@
   </head>
   <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}">
     <header class="global-header">
-      <div class="global-header--title-container">
-        <a class="global-header--title" href="{{ '/' | url }}">{{ metadata.title }}</a>
-      </div>
+      <a class="global-header--title" href="{{ '/' | url }}">{{ metadata.title }}</a>
       <nav class="global-header--nav">
         <ul>
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}

@@ -98,9 +98,34 @@ main.home {
 }
 
 .home-container {
-  width: 100%;
-  max-width: 720px;
-  padding: 0 4vw 10vh;
+  display: grid;
+    width: 100%;
+    max-width: 1024px;
+    padding: 10vh 4vw 10vh 0;
+    grid-template-columns: 2fr 10fr 2fr;
+    gap: 2rem;
+}
+
+.home-container h1 {
+  grid-column: 1 / 2;
+  transform-origin: center;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  box-shadow: none;
+  font-size: 3.5rem;
+  font-weight: 800;
+  align-self: flex-start;
+  color: var(--color-subtle);
+  font-variant: all-petite-caps;
+}
+
+@media screen and (max-width: 420px) {
+  .home-container {
+    gap: 1rem;
+  }
+  .home-container h1{
+    font-size: 2.5rem;
+  }
 }
 
 table {
