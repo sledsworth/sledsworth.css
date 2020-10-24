@@ -1,6 +1,7 @@
 .post-list {
   list-style: none;
   padding: 0;
+  width: 100%;
   grid-column: 2 / 3;
 }
 
@@ -21,7 +22,7 @@
   grid-column: 2 / 3;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 800px) {
   .post-list,
   .post-list--find-more {
     grid-column: 2 / 4;

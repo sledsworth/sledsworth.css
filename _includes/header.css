@@ -47,7 +47,7 @@
 .global-header {
   display: grid;
   grid-template-areas: "title nav avatar" "title description description";
-  grid-template-columns: 2fr 10fr 2fr;
+  grid-template-columns: 2fr minmax(0, 10fr) 2fr;
   gap: 2rem;
   padding: 10vh 4vw 10vh 0;
   max-width: 1024px;
@@ -85,7 +85,7 @@
   max-width: 460px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .global-header .global-header--avatar {
