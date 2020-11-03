@@ -1,118 +1,51 @@
-/* .global-header {
-	font-family: "SF Pro Rounded", system-ui, sans-serif;
-	display: flex;
-	max-width: var(--max-width);
-	margin: auto;
-}
-
-.gobal-header-title-section {
-	flex: 2 1;
-}
-
-.global-header-title {
-	margin: 0.15rem 0 0;
-}
-
-.global-header-tagline {
-	max-width: 400px;
-	margin: 1rem 0 0;
-	font-size: var(--font-size-s);
-	color: var(--color-text-light);
-	font-weight: 400;
-}
-
-.global-header-nav {
-	flex: 2 2;
-	max-width: 260px;
-	padding: 0;
-	display: flex;
-	justify-content: space-between;
-	margin: 0.5rem 0 0 0;
-}
-
-.nav {
-	padding: 0;
-	list-style: none;
-	margin-left: 1em;
-}
-
-.nav-item a:not(:hover) {
-	text-decoration: none;
-}
-.nav-item-active a {
-	font-weight: 800;
-	box-shadow: 0px -6px var(--color-primary) inset;
-} */
-
-.global-header {
+.header {
   display: grid;
-  grid-template-areas: "title nav avatar" "title description description";
-  grid-template-columns: 2fr minmax(0, 10fr) 2fr;
-  gap: 2rem;
-  padding: 10vh 4vw 10vh 0;
-  max-width: 1024px;
+  grid-template-areas:
+    "avatar"
+    "title"
+    "subtitle"
+    "nav";
+  justify-items: center;
+  margin: 8vh max(4vw, 1rem);
+  gap: 1rem;
+  max-width: var(--max-width);
 }
 
-.global-header .global-header--title {
+.header__title {
   grid-area: title;
-  transform-origin: center;
-  transform: rotate(180deg);
-  writing-mode: vertical-rl;
-  box-shadow: none;
-  font-size: 3.5rem;
-  font-weight: 800;
+  font-size: var(--font-size-xl);
 }
 
-.global-header .global-header--nav {
+.header__nav {
   grid-area: nav;
 }
 
-.global-header .global-header--nav ul {
-  list-style: none;
+.header__nav-list {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0;
-  height: 100%;
+  gap: 8vw;
 }
 
-.global-header .global-header--nav ul li::before {
-  content: none;
+.header__nav-item {
+
 }
 
-.global-header .global-header--description {
-  grid-area: description;
-  max-width: 460px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.header__nav-item--active {
+
 }
 
-.global-header .global-header--avatar {
+.header__avatar {
   grid-area: avatar;
-  border-radius: 100%;
+  border-radius: 100px;
   max-width: 200px;
-  width: 25vw;
+  width: 40vw;
   max-height: 200px;
-  height: 25vw;
+  height: 40vw;
+  box-shadow: var(--shadow);
 }
 
-@media screen and (max-width: 420px) {
-  .global-header {
-    gap: 1rem;
-  }
-  .global-header .global-header--title {
-    font-size: 2.5rem;
-  }
+.header__subtitle {
+  grid-area: subtitle;
+  text-align: center;
 }
-@media screen and (min-width: 720px) {
-  .global-header .global-header--nav ul {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .global-header .global-header--nav ul li {
-    margin: 0 2rem 0 0;
-  }
-}
+
 

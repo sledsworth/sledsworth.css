@@ -10,7 +10,7 @@
   --max-width-s: 500px;
   --max-width-l: 900px;
 
-  --shadow-l: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  --shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
 }
@@ -99,11 +99,11 @@ main.home {
 
 .home-container {
   display: grid;
-    width: 100%;
-    max-width: 1024px;
-    padding: 0 4vw 10vh 0;
-    grid-template-columns: 2fr minmax(0, 10fr) 2fr;
-    gap: 2rem;
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 4vw 10vh 0;
+  grid-template-columns: 2fr minmax(0, 10fr) 2fr;
+  gap: 2rem;
 }
 
 .home-container h1 {
@@ -119,7 +119,7 @@ main.home {
   font-variant: all-petite-caps;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 600px) {
   .home-container {
     gap: 0;
     grid-template-columns: 1rem minmax(0, 10fr) 2fr;
@@ -127,8 +127,8 @@ main.home {
   .home-container h1{
     font-size: 2.5rem;
     grid-column: 2 / 4;
-    transform: none;
-    writing-mode: lr;
+    transform: initial;
+    writing-mode: initial;
   }
 }
 
@@ -354,10 +354,10 @@ strong {
   font-weight: 700;
 }
 
-img:not([src$=".svg"]) {
+/* img:not([src$=".svg"]) {
   border-radius: 16px;
   box-shadow: var(--shadow-l);
-}
+} */
 
 /* Icons */
 #external-arrow path {

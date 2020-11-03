@@ -18,6 +18,7 @@
     {% endblock %}
   </head>
   <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}">
+    {% include '../header.njk' %}
     <header class="global-header">
       <a class="global-header--title" href="{{ '/' | url }}">{{ metadata.title }}</a>
       <nav class="global-header--nav">
@@ -41,7 +42,6 @@
     </main>
     <footer>
       <nav class="card">
-
         <a href="/rss.xml">RSS</a>
         <a href="mailto:sledsworth@mac.com">Email</a>
         <a href="https://twitter.com/sledsworth">Twitter</a>

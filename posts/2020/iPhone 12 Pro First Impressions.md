@@ -1,5 +1,5 @@
 ---
-title: First Impressions: iPhone 12 Pro
+title: "First Impressions: iPhone 12 Pro"
 description: I'm a few days in with the new iPhone and I'm not sure I'll keep it.
 date: 2020-10-26T23:23:26-04:00
 tags:

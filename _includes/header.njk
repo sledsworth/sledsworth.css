@@ -1,0 +1,21 @@
+<header class="header">
+  <img class="header__avatar" src="/assets/img/avatar.png" />
+  <h1><a class="header__title" href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+  <section class="header__subtitle" role="doc-subtitle">
+    <p>{{ metadata.description }}</p>
+    <p>Mostly about tech, videogames, and software development—but like everything else, politics might get in the way.</p>
+  </section>
+  <nav class="header__nav">
+    <ul class="header__nav-list">
+    {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+    {%- for entry in collections.all | eleventyNavigation %}
+      <li class="header__nav-item{% if entry.url == page.url %} header__nav-item--active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+    {%- endfor %}
+    </ul>
+  </nav>
+  <script>
+    var subtitles = {{ metadata.subtitles }};
+    console.log(subtitles);
+    // TODO Add script to cycle through subtitles.
+  </script>
+</header>

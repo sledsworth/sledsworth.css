@@ -6,6 +6,8 @@
 
 Steve is an anxious young adult gifted with the health and stamina of a middle-aged man.
 
+He isn't a prestigious award winner of anything—although, he did make a [game]() in college that somehow was better than what the rest of the lot came up with.
+
 He works as a front-end software developer at an insurance company. Currently, he's spending most of time getting a component library off the ground, mentoring, and advocating for more front-end specialization.
 
 He has totally bought into putting precious metals into random shit to—allegedly—make it smell better.
