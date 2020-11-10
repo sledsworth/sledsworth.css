@@ -19,7 +19,7 @@
   </head>
   <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}">
     {% include '../header.njk' %}
-    <header class="global-header">
+    <!-- <header class="global-header">
       <a class="global-header--title" href="{{ '/' | url }}">{{ metadata.title }}</a>
       <nav class="global-header--nav">
         <ul>
@@ -34,7 +34,7 @@
         <p>{{ metadata.description }}</p>
         <p>Mostly about tech, videogames, and software development—but like everything else, politics might get in the way.</p>
       </aside>
-    </header>
+    </header> -->
     <main class="{% if templateClass %}{{ templateClass }}{% else %}container{% endif %}">
       {% block content %}
         {{ content | safe }}
