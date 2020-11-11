@@ -7,8 +7,9 @@
     "nav";
   justify-items: center;
   margin: 8vh max(4vw, 1rem);
-  gap: 0 2vw;
+  gap: 2vh;
   max-width: var(--max-width);
+  width: 100%;
 }
 
 .header__title {
@@ -50,7 +51,7 @@
 .header__subtitle {
   grid-area: subtitle;
   text-align: center;
-  line-height: 2vw;
+  line-height: 1.5rem;
 }
 
 @media screen and (min-width: 700px) {
@@ -58,9 +59,11 @@
     grid-template-areas:
       "title avatar"
       "subtitle avatar"
-      "nav nav";
+      "nav avatar";
+    grid-template-columns: 1fr 100px;
     justify-items: start;
     margin: 8vh max(4vw, 1rem);
+    gap: 2vh;
   }
 
   .header__subtitle {
@@ -77,6 +80,7 @@
     justify-items: start;
     align-items: start;
     margin: 8vh max(4vw, 1rem);
+    gap: 0 2vw;
   }
 
   .header__subtitle {
