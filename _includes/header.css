@@ -7,23 +7,26 @@
     "nav";
   justify-items: center;
   margin: 8vh max(4vw, 1rem);
-  gap: 2vh;
+  gap: 0 2vw;
   max-width: var(--max-width);
 }
 
 .header__title {
   grid-area: title;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-l);
   margin: 0;
+  align-self: baseline;
 }
 
 .header__nav {
   grid-area: nav;
+  align-self: baseline;
 }
 
 .header__nav-list {
   display: flex;
-  gap: max(1rem, 4vw);
+  gap: min(1rem, 4vw);
+  margin: 0;
 }
 
 .header__nav-item {
@@ -37,9 +40,9 @@
 .header__avatar {
   grid-area: avatar;
   border-radius: 100px;
-  max-width: 200px;
+  max-width: 100px;
   width: 40vw;
-  max-height: 200px;
+  max-height: 100px;
   height: 40vw;
   box-shadow: var(--shadow);
 }
@@ -47,6 +50,7 @@
 .header__subtitle {
   grid-area: subtitle;
   text-align: center;
+  line-height: 2vw;
 }
 
 @media screen and (min-width: 700px) {
@@ -55,9 +59,12 @@
       "title avatar"
       "subtitle avatar"
       "nav nav";
-    justify-items: flex-start;
+    justify-items: start;
     margin: 8vh max(4vw, 1rem);
-    gap: 1vh;
+  }
+
+  .header__subtitle {
+    text-align: start;
   }
 }
 
@@ -66,9 +73,14 @@
     grid-template-areas:
       "avatar title nav"
       "avatar subtitle .";
-    justify-items: flex-start;
+    grid-template-columns: 100px 3fr 1fr;
+    justify-items: start;
+    align-items: start;
     margin: 8vh max(4vw, 1rem);
-    gap: 1vh;
+  }
+
+  .header__subtitle {
+    text-align: start;
   }
 }
 
