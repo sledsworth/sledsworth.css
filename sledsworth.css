@@ -1,8 +1,8 @@
 :root {
-  --font-size: clamp(17px, 4vw, 24px);
-  --font-size-s: clamp(14px, 3vw, 17px);
-  --font-size-l: clamp(24px, 7vw, 32px);;
-  --font-size-xl: clamp(32px, 10vw, 48px);
+  --font-size: clamp(17px, calc(17px + .3vw), 24px);
+  --font-size-s: clamp(14px, calc(14px + .3vw), 19px);
+  --font-size-l: clamp(24px, calc(24px + 1vw), 32px);;
+  --font-size-xl: clamp(32px, calc(32px + 1vw), 48px);
 
   --line-height: 1.618;
   --line-height-s: 1;
