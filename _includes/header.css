@@ -6,9 +6,9 @@
     "subtitle"
     "nav";
   justify-items: center;
-  margin: 8vh max(4vw, 1rem);
+  padding: 8vh max(4vw, 1rem);
   gap: 2vh;
-  max-width: var(--max-width);
+  max-width: 900px;
   width: 100%;
 }
 
@@ -26,12 +26,16 @@
 
 .header__nav-list {
   display: flex;
-  gap: min(1rem, 4vw);
+  /* gap: min(1rem, 4vw); */
   margin: 0;
 }
 
 .header__nav-item {
+  margin-right: min(1rem,4vw)
+}
 
+.header__nav-item:last-child {
+  margin-right: 0;
 }
 
 .header__nav-item--active {
@@ -51,32 +55,15 @@
 .header__subtitle {
   grid-area: subtitle;
   text-align: center;
-  line-height: 1.5rem;
+  /* line-height: 1.5rem; */
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 720px) {
   .header {
     grid-template-areas:
-      "title avatar"
-      "subtitle avatar"
-      "nav avatar";
-    grid-template-columns: 1fr 100px;
-    justify-items: start;
-    margin: 8vh max(4vw, 1rem);
-    gap: 2vh;
-  }
-
-  .header__subtitle {
-    text-align: start;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .header {
-    grid-template-areas:
-      "avatar title nav"
-      "avatar subtitle .";
-    grid-template-columns: 100px 3fr 1fr;
+      "avatar title nav nav"
+      "avatar subtitle subtitle .";
+    grid-template-columns: 100px 3fr 1fr 100px;
     justify-items: start;
     align-items: start;
     margin: 8vh max(4vw, 1rem);
