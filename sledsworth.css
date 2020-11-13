@@ -1,10 +1,10 @@
 :root {
-  --font-size: clamp(17px, calc(17px + .3vw), 24px);
+  --font-size: clamp(18px, calc(18px + .3vw), 24px);
   --font-size-s: clamp(14px, calc(14px + .3vw), 19px);
   --font-size-l: clamp(24px, calc(24px + 1vw), 32px);;
   --font-size-xl: clamp(32px, calc(32px + 1vw), 48px);
 
-  --line-height: 1.618;
+  --line-height: 1.5;
   --line-height-s: 1;
   --line-height-l: 1.286;
   --line-height-xl: 1.286;
@@ -119,6 +119,7 @@ video {
   border: 0;
   font: inherit;
   vertical-align: baseline;
+  line-height: var(--line-height);
 }
 
 sup {
