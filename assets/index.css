@@ -98,28 +98,30 @@ main.home {
 }
 
 .home-container {
-  display: grid;
-  width: 100%;
-  max-width: 1024px;
-  padding: 0 4vw 10vh 0;
-  grid-template-columns: 2fr minmax(0, 10fr) 2fr;
-  gap: 2rem;
+display: grid;
+width: 100%;
+max-width: 900px;
+/* padding: 0 4vw 10vh 0; */
+grid-template-columns: 100px 3fr 1fr 100px;
+gap: min(2rem, 2vw);
+margin: 0 max(4vw, 1rem);
+padding: 8vh max(4vw, 1rem);
 }
 
 .home-container h1 {
-  grid-column: 1 / 2;
-  transform-origin: center;
-  transform: rotate(180deg);
-  writing-mode: vertical-rl;
-  box-shadow: none;
-  font-size: 3.5rem;
-  font-weight: 800;
-  align-self: flex-start;
-  color: var(--color-subtle);
-  font-variant: all-petite-caps;
+grid-column: 2 / 5;
+/* transform-origin: center; */
+/* transform: rotate(180deg); */
+/* writing-mode: vertical-rl; */
+/* box-shadow: none; */
+/* font-size: 5rem;
+font-weight: 600;
+align-self: flex-start;
+color: var(--color-subtle);
+font-variant: all-petite-caps; */
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .home-container {
     gap: 0;
     grid-template-columns: 1rem minmax(0, 10fr) 2fr;
@@ -130,7 +132,7 @@ main.home {
     transform: initial;
     writing-mode: initial;
   }
-}
+} */
 
 table {
   margin: 1em 0;
