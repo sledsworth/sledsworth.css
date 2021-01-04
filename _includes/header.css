@@ -55,7 +55,10 @@
 .header__subtitle {
   grid-area: subtitle;
   text-align: center;
-  /* line-height: 1.5rem; */
+}
+
+.header__subtitle__text {
+  line-height: 1.4rem;
 }
 
 @media screen and (min-width: 720px) {

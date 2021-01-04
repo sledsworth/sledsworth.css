@@ -2,8 +2,7 @@
   <img class="header__avatar" src="/assets/img/avatar.png" />
   <h1 class="header__title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
   <section id="subtitle-container" class="header__subtitle" role="doc-subtitle">
-    <p>{{ metadata.description }}</p>
-    <p>Mostly about tech, videogames, and software development—but like everything else, politics might get in the way.</p>
+    <p class="header__subtitle__text">{{ metadata.description }}</p>
   </section>
   <nav class="header__nav">
     <ul class="header__nav-list">
@@ -38,7 +37,7 @@
       var subtitle = subtitles[index];
       var subtitleContainer = document.getElementById('subtitle-container');
 
-      subtitleContainer.innerHTML = `<p style="color: ${subtitle.color};">${subtitle.text}</p>`
+      subtitleContainer.innerHTML = `<p class="header__subtitle__text" style="color: ${subtitle.color};">${subtitle.text}</p>`
     }
 
     setSubtitle();
