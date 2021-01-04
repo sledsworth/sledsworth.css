@@ -7,6 +7,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownFootnotes = require("markdown-it-footnote");
 const CleanCSS = require("clean-css");
+const { minify } = require("terser");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -48,6 +49,20 @@ module.exports = function (eleventyConfig) {
     }
 
     return array.slice(0, n);
+  });
+
+  eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
+    code,
+    callback
+  ) {
+    try {
+      const minified = await minify(code);
+      callback(null, minified.code);
+    } catch (err) {
+      console.error("Terser error: ", err);
+      // Fail gracefully.
+      callback(null, code);
+    }
   });
 
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
