@@ -1,7 +1,7 @@
 :root {
-  --font-size: clamp(18px, calc(18px + .3vw), 24px);
-  --font-size-s: clamp(14px, calc(14px + .3vw), 19px);
-  --font-size-l: clamp(24px, calc(24px + 1vw), 32px);;
+  --font-size: clamp(18px, calc(18px + 0.3vw), 24px);
+  --font-size-s: clamp(14px, calc(14px + 0.3vw), 19px);
+  --font-size-l: clamp(24px, calc(24px + 1vw), 32px);
   --font-size-xl: clamp(32px, calc(32px + 1vw), 48px);
 
   --line-height: 1.5;
@@ -119,7 +119,6 @@ video {
   border: 0;
   font: inherit;
   vertical-align: baseline;
-  line-height: var(--line-height);
 }
 
 sup {
@@ -136,14 +135,13 @@ sup {
 
 body {
   font-size: var(--font-size);
-  margin: 0;
+  line-height: var(--line-height);
+  color: var(--color-text);
   min-height: 100vh;
   scroll-behavior: smooth;
-  text-rendering: optimizeLegibility;
-  line-height: var(--line-height);
+  text-rendering: optimizeLegibility; /* TODO: Make sure this isn't a huge performance hit */
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "kern" 1, "liga" 1;
-  color: var(--color-text);
 }
 
 h1 {
