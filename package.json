@@ -1,0 +1,33 @@
+{
+  "name": "sledsworth.css",
+  "version": "2.0.0",
+  "description": "Common CSS for resets, utilities, and default theming.",
+  "main": "dist/index.css",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://sledsworth@github.com/sledsworth/sledsworth.css.git"
+  },
+  "keywords": [
+    "css",
+    "web",
+    "reset"
+  ],
+  "author": "Steve Ledsworth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sledsworth/sledsworth.css/issues"
+  },
+  "homepage": "https://github.com/sledsworth/sledsworth.css#readme",
+  "devDependencies": {
+    "clean-css": "^5.1.5",
+    "fast-glob": "^3.2.7",
+    "sass": "^1.41.0"
+  }
+}
