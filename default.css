@@ -5,15 +5,14 @@
   --font-size-xl: clamp(32px, calc(32px + 1vw), 48px);
   --line-height: 1.5;
   --line-height-s: 1;
-  --line-height-l: 1.286;
-  --line-height-xl: 1.286;
+  --line-height-l: 1.7;
+  --line-height-xl: 2;
   --space-vertical: 6vh;
   --space-horizontal: 6vw;
   --max-width: 700px;
   --color-primary: black;
-  --color-text-light: rgba(0, 0, 0, 0.45);
-  --color-text: rgba(0, 0, 0, 0.75);
-  --color-text-dark: rgba(0, 0, 0, 0.85);
+  --color-text-primary: rgba(0, 0, 0, 0.75);
+  --color-text-secondary: rgba(0, 0, 0, 0.45);
   --color-container: rgba(0, 0, 0, 0.06);
   --color-background: white;
   --spacing-xs: 8px;
@@ -25,9 +24,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: white;
-    --color-text-light: rgba(255, 255, 255, 0.5);
-    --color-text: rgba(255, 255, 255, 0.75);
-    --color-text-dark: rgba(255, 255, 255, 0.95);
+    --color-text-secondary: rgba(255, 255, 255, 0.5);
+    --color-text-primary: rgba(255, 255, 255, 0.95);
     --color-container: rgba(255, 255, 255, 0.15);
     --color-background: black;
   }
@@ -53,7 +51,7 @@ h3 {
   font-weight: 600;
   font-variant: all-small-caps;
   line-height: var(--line-height-l);
-  color: var(--color-text-light);
+  color: var(--color-text-secondary);
 }
 
 h4 {
@@ -67,7 +65,7 @@ h5 {
   font-size: 1rem;
   margin: 0 0 2vh;
   font-weight: 800;
-  color: var(--color-text-dark);
+  color: var(--color-text-primary);
 }
 
 h6 {

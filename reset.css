@@ -100,7 +100,8 @@ sup {
 body {
   font-size: var(--font-size);
   line-height: var(--line-height);
-  color: var(--color-text);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
   min-height: 100vh;
   scroll-behavior: smooth;
   /* TODO: Make sure this isn't a huge performance hit */

@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "build": "node build.js",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "start": "http-server ."
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "clean-css": "^5.1.5",
     "fast-glob": "^3.2.7",
+    "http-server": "^13.0.2",
     "sass": "^1.41.0"
   }
 }
