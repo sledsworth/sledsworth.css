@@ -7,8 +7,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "node build.js",
-    "prepublish": "npm run build",
+    "build": "sass --style=compressed ./src:./dist",
+    "build:watch": "sass --watch ./src:./dist",
+    "clean": "rm -rf ./dist",
+    "prepublish": "npm run build:prod",
     "start": "http-server ."
   },
   "repository": {
