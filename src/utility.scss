@@ -7,6 +7,11 @@
   opacity: 0.25;
 }
 
+ul li[data-icon]::before {
+  content: attr(data-icon);
+  font-size: 1.25em;
+}
+
 .horizontal {
   display: flex;
   flex-direction: row;
@@ -25,4 +30,10 @@
 
 .flex {
   flex: 1;
+}
+
+@for $i from 1 through 12 {
+  .flex-#{$i} {
+    flex: $i;
+  }
 }
