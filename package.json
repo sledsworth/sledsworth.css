@@ -29,8 +29,6 @@
   },
   "homepage": "https://github.com/sledsworth/sledsworth.css#readme",
   "devDependencies": {
-    "clean-css": "^5.1.5",
-    "fast-glob": "^3.2.7",
     "http-server": "^13.0.2",
     "sass": "^1.41.0"
   }
