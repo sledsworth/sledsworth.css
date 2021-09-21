@@ -3,8 +3,7 @@
   --font-size-400: clamp(20px, calc(20px + 0.3vw), 26px);
   --font-size-500: clamp(28px, calc(28px + 1vw), 34px);
   --font-size-600: clamp(34px, calc(34px + 1vw), 56px);
-  --spacing-top: 1em;
-  --spacing-bottom: 0.66em;
+  --spacing-flow: 1rem;
   --line-height: 1.3;
   --content-width: 600px;
   --color-accent: black;
@@ -41,20 +40,24 @@ h6,
 p,
 blockquote,
 ol,
-ul {
+ul, 
+article {
   max-width: var(--content-width);
-  margin: var(--spacing-top) auto var(--spacing-bottom);
+  margin: var(--spacing-flow) auto 0;
 }
 
 h1 {
+  --spacing-flow: 4rem;
   font-size: var(--font-size-600);
 }
 
 h2 {
+  --spacing-flow: 3rem;
   font-size: var(--font-size-500);
 }
 
 h3 {
+  --spacing-flow: 2rem;
   font-size: var(--font-size-400);
 }
 
@@ -85,6 +88,10 @@ li {
   grid-template-columns: 0 1fr;
   grid-gap: 1.75em;
   align-items: start;
+  
+  & p:first-child {
+    margin-top: 0;
+  }
 }
 
 strong {
