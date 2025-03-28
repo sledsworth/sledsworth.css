@@ -7,11 +7,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "sass --style=compressed ./src:./dist",
-    "build:watch": "sass --watch ./src:./dist",
+    "build": "esbuild --bundle src/index.css --minify --outfile=dist/index.css",
+    "build:watch": "esbuild --watch --bundle src/index.css --outfile=dist/index.css",
     "clean": "rm -rf ./dist",
-    "prepublish": "npm run build:prod",
-    "start": "http-server ."
+    "prepublish": "npm run build",
+    "start": "browser-sync start --server --files \"dist/**\" index.html"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,8 @@
   },
   "homepage": "https://github.com/sledsworth/sledsworth.css#readme",
   "devDependencies": {
-    "http-server": "^13.0.2",
-    "sass": "^1.41.0"
+    "@biomejs/biome": "1.9.4",
+    "browser-sync": "3.0.3",
+    "esbuild": "0.25.1"
   }
 }

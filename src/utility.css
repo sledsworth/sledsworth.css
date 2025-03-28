@@ -31,9 +31,3 @@ ul li[data-icon]::before {
 .flex {
   flex: 1;
 }
-
-@for $i from 1 through 12 {
-  .flex-#{$i} {
-    flex: $i;
-  }
-}
